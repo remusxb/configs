@@ -1,0 +1,75 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#e0def4",
+          "style": "plain",
+          "template": "\u00A0",
+          "type": "text"
+        },
+        {
+          "foreground": "#ea9a97",
+          "properties": {
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "{{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "foreground": "#3e8fb0",
+          "properties": {
+            "branch_icon": "",
+            "fetch_status": true,
+            "fetch_stash_count": true,
+            "fetch_worktree_count": true
+          },
+          "style": "plain",
+          "template": "git:({{ if or (.Working.Changed) (.Staging.Changed) }}<#f6c177>{{ .HEAD }}</>{{ else }}<#c4a7e7>{{ .HEAD }}</>{{ end }}{{ if (gt .Ahead 0) }} <#e0def4>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0) }} <#e0def4>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <#ea9a97>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <#f6c177>{{ .Working.String }}</>{{ end }}{{ if gt .StashCount 0 }} <#e0def4>*{{ .StashCount }}</>{{ end }})",
+          "type": "git"
+        },
+        {
+          "foreground": "#eb6f92",
+          "style": "plain",
+          "template": " {{ .Code }} ",
+          "type": "status"
+        },
+        {
+          "foreground": "#6e6a86",
+          "powerline_symbol": "\ue0c4",
+          "properties": {
+            "style": "austin",
+            "threshold": 1
+          },
+          "style": "plain",
+          "template": " ({{ .FormattedMs }}) ",
+          "type": "executiontime"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#6e6a86",
+          "foreground_templates": [
+               "{{ if gt .Code 0 }}#eb6f92{{ end }}"
+           ],
+           "properties": {
+                "always_enabled": true
+            },
+            "style": "plain",
+            "template": "\u276f ",
+            "type": "status"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}
