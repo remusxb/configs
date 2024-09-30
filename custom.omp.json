@@ -22,7 +22,7 @@
                         "style": "full"
                     },
                     "style": "plain",
-                    "template": " \ue5ff {{ .Path }} ",
+                    "template": " \uf07b {{ .Path }} ",
                     "type": "path"
                 },
                 {
