@@ -6,76 +6,91 @@
             "alignment": "left",
             "segments": [
                 {
+                    "template": "\u0000",
                     "type": "text",
-                    "style": "plain",
-                    "template": "\u0000"
+                    "style": "plain"
                 }
             ],
             "newline": true
         },
         {
+            "type": "prompt",
             "alignment": "left",
             "segments": [
                 {
-                    "foreground": "#ea9a97",
                     "properties": {
                         "style": "full"
                     },
-                    "style": "plain",
                     "template": " \uf07b {{ .Path }} ",
-                    "type": "path"
+                    "foreground": "#c7ae95",
+                    "type": "path",
+                    "style": "plain"
                 },
                 {
-                    "foreground": "#3e8fb0",
                     "properties": {
                         "branch_icon": "",
-                        "fetch_status": true,
                         "fetch_stash_count": true,
+                        "fetch_status": true,
                         "fetch_worktree_count": true
                     },
-                    "style": "plain",
-                    "template": "git:({{ if or (.Working.Changed) (.Staging.Changed) }}<#f6c177>{{ .HEAD }}</>{{ else }}<#c4a7e7>{{ .HEAD }}</>{{ end }}{{ if (gt .Ahead 0) }} <#e0def4>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0) }} <#e0def4>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <#ea9a97>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <#f6c177>{{ .Working.String }}</>{{ end }}{{ if gt .StashCount 0 }} <#e0def4>*{{ .StashCount }}</>{{ end }})",
-                    "type": "git"
+                    "template": "git:({{ if or (.Working.Changed) (.Staging.Changed) }}<#c79595>{{ .HEAD }}</>{{ else }}<#ae95c7>{{ .HEAD }}</>{{ end }}{{ if (gt .Ahead 0) }} <#aec795>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0) }} <#aec795>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <#c79595>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <#c7c795>{{ .Working.String }}</>{{ end }}{{ if gt .StashCount 0 }} <#dfe2e5>*{{ .StashCount }}</>{{ end }})",
+                    "foreground": "#95aec7",
+                    "type": "git",
+                    "style": "plain"
                 },
                 {
-                    "foreground": "#eb6f92",
-                    "style": "plain",
                     "template": " {{ .Code }} ",
-                    "type": "status"
+                    "foreground": "#c79595",
+                    "type": "status",
+                    "style": "plain"
                 },
                 {
-                    "foreground": "#6e6a86",
-                    "powerline_symbol": "\ue0c4",
                     "properties": {
                         "style": "austin",
                         "threshold": 1
                     },
-                    "style": "plain",
                     "template": " ({{ .FormattedMs }}) ",
-                    "type": "executiontime"
+                    "foreground": "#44484b",
+                    "powerline_symbol": "\ue0c4",
+                    "type": "executiontime",
+                    "style": "plain"
+                },
+                {
+                    "properties": {
+                        "extensions": [
+                            ".zip",
+                            ".tar.gz",
+                            ".tar",
+                            ".7z",
+                            ".rar"
+                        ]
+                    },
+                    "template": " {{ .FileName }} ",
+                    "foreground": "#95aec7",
+                    "type": "command",
+                    "style": "plain"
                 }
-            ],
-            "type": "prompt"
+            ]
         },
         {
+            "type": "prompt",
             "alignment": "left",
-            "newline": true,
             "segments": [
                 {
-                    "foreground": "#6e6a86",
-                    "foreground_templates": [
-                        "{{ if gt .Code 0 }}#eb6f92{{ end }}"
-                    ],
                     "properties": {
                         "always_enabled": true
                     },
+                    "template": "❯ ",
+                    "foreground": "#95c7ae",
+                    "type": "status",
                     "style": "plain",
-                    "template": "\u276f ",
-                    "type": "status"
+                    "foreground_templates": [
+                        "{{ if gt .Code 0 }}#c795ae{{ end }}"
+                    ]
                 }
             ],
-            "type": "prompt"
+            "newline": true
         }
     ],
-    "version": 2
+    "version": 3
 }
