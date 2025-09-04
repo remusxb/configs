@@ -1,96 +1,97 @@
 {
-    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-    "blocks": [
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
         {
-            "type": "prompt",
-            "alignment": "left",
-            "segments": [
-                {
-                    "template": "\u0000",
-                    "type": "text",
-                    "style": "plain"
-                }
-            ],
-            "newline": true
-        },
-        {
-            "type": "prompt",
-            "alignment": "left",
-            "segments": [
-                {
-                    "properties": {
-                        "style": "full"
-                    },
-                    "template": " \uf07b {{ .Path }} ",
-                    "foreground": "#c7ae95",
-                    "type": "path",
-                    "style": "plain"
-                },
-                {
-                    "properties": {
-                        "branch_icon": "",
-                        "fetch_stash_count": true,
-                        "fetch_status": true,
-                        "fetch_worktree_count": true
-                    },
-                    "template": "git:({{ if or (.Working.Changed) (.Staging.Changed) }}<#c79595>{{ .HEAD }}</>{{ else }}<#ae95c7>{{ .HEAD }}</>{{ end }}{{ if (gt .Ahead 0) }} <#aec795>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0) }} <#aec795>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <#c79595>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <#c7c795>{{ .Working.String }}</>{{ end }}{{ if gt .StashCount 0 }} <#dfe2e5>*{{ .StashCount }}</>{{ end }})",
-                    "foreground": "#95aec7",
-                    "type": "git",
-                    "style": "plain"
-                },
-                {
-                    "template": " {{ .Code }} ",
-                    "foreground": "#c79595",
-                    "type": "status",
-                    "style": "plain"
-                },
-                {
-                    "properties": {
-                        "style": "austin",
-                        "threshold": 1
-                    },
-                    "template": " ({{ .FormattedMs }}) ",
-                    "foreground": "#44484b",
-                    "powerline_symbol": "\ue0c4",
-                    "type": "executiontime",
-                    "style": "plain"
-                },
-                {
-                    "properties": {
-                        "extensions": [
-                            ".zip",
-                            ".tar.gz",
-                            ".tar",
-                            ".7z",
-                            ".rar"
-                        ]
-                    },
-                    "template": " {{ .FileName }} ",
-                    "foreground": "#95aec7",
-                    "type": "command",
-                    "style": "plain"
-                }
-            ]
-        },
-        {
-            "type": "prompt",
-            "alignment": "left",
-            "segments": [
-                {
-                    "properties": {
-                        "always_enabled": true
-                    },
-                    "template": "❯ ",
-                    "foreground": "#95c7ae",
-                    "type": "status",
-                    "style": "plain",
-                    "foreground_templates": [
-                        "{{ if gt .Code 0 }}#c795ae{{ end }}"
-                    ]
-                }
-            ],
-            "newline": true
+          "template": "\u0000",
+          "type": "text",
+          "style": "plain"
         }
-    ],
-    "version": 3
+      ],
+      "newline": true
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "style": "full"
+          },
+          "template": " \uf07b {{ .Path }} ",
+          "foreground": "#c7ae95",
+          "type": "path",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "branch_icon": "",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_worktree_count": true
+          },
+          "template": "git:({{ if or (.Working.Changed) (.Staging.Changed) }}<#c79595>{{ .HEAD }}</>{{ else }}<#ae95c7>{{ .HEAD }}</>{{ end }}{{ if (gt .Ahead 0) }} <#aec795>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0) }} <#aec795>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <#c79595>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <#c7c795>{{ .Working.String }}</>{{ end }}{{ if gt .StashCount 0 }} <#dfe2e5>*{{ .StashCount }}</>{{ end }})",
+          "foreground": "#95aec7",
+          "type": "git",
+          "style": "plain"
+        },
+        {
+          "type": "python",
+          "style": "plain",
+          "foreground": "#95c7c7",
+          "properties": {
+            "display_mode": "environment"
+          },
+          "template": "  {{ .Venv }} "
+        },
+        {
+          "template": " {{ .Code }} ",
+          "foreground": "#c79595",
+          "type": "status",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "style": "austin",
+            "threshold": 1
+          },
+          "template": " ({{ .FormattedMs }}) ",
+          "foreground": "#44484b",
+          "powerline_symbol": "\ue0c4",
+          "type": "executiontime",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "extensions": [".zip", ".tar.gz", ".tar", ".7z", ".rar"]
+          },
+          "template": " {{ .FileName }} ",
+          "foreground": "#95aec7",
+          "type": "command",
+          "style": "plain"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "always_enabled": true
+          },
+          "template": "❯ ",
+          "foreground": "#95c7ae",
+          "type": "status",
+          "style": "plain",
+          "foreground_templates": ["{{ if gt .Code 0 }}#c795ae{{ end }}"]
+        }
+      ],
+      "newline": true
+    }
+  ],
+  "version": 3
 }
