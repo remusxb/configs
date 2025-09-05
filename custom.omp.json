@@ -4,13 +4,7 @@
     {
       "type": "prompt",
       "alignment": "left",
-      "segments": [
-        {
-          "template": "\u0000",
-          "type": "text",
-          "style": "plain"
-        }
-      ],
+      "segments": [{ "template": "\u0000", "type": "text", "style": "plain" }],
       "newline": true
     },
     {
@@ -18,11 +12,9 @@
       "alignment": "left",
       "segments": [
         {
-          "properties": {
-            "style": "full"
-          },
+          "properties": { "style": "full" },
           "template": " \uf07b {{ .Path }} ",
-          "foreground": "#c7ae95",
+          "foreground": "#ea9a97",
           "type": "path",
           "style": "plain"
         },
@@ -33,33 +25,28 @@
             "fetch_status": true,
             "fetch_worktree_count": true
           },
-          "template": "git:({{ if or (.Working.Changed) (.Staging.Changed) }}<#c79595>{{ .HEAD }}</>{{ else }}<#ae95c7>{{ .HEAD }}</>{{ end }}{{ if (gt .Ahead 0) }} <#aec795>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0) }} <#aec795>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <#c79595>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <#c7c795>{{ .Working.String }}</>{{ end }}{{ if gt .StashCount 0 }} <#dfe2e5>*{{ .StashCount }}</>{{ end }})",
-          "foreground": "#95aec7",
+          "template": "git:({{ if or (.Working.Changed) (.Staging.Changed) }}<#f6c177>{{ .HEAD }}</>{{ else }}<#c4a7e7>{{ .HEAD }}</>{{ end }}{{ if (gt .Ahead 0) }} <#9ccfd8>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0) }} <#eb6f92>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <#c4a7e7>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <#eb6f92>{{ .Working.String }}</>{{ end }}{{ if gt .StashCount 0 }} <#e0def4>*{{ .StashCount }}</>{{ end }})",
+          "foreground": "#3e8fb0",
           "type": "git",
           "style": "plain"
         },
         {
           "type": "python",
           "style": "plain",
-          "foreground": "#95c7c7",
-          "properties": {
-            "display_mode": "environment"
-          },
+          "foreground": "#c4a7e7",
+          "properties": { "display_mode": "environment" },
           "template": "  {{ .Venv }} "
         },
         {
           "template": " {{ .Code }} ",
-          "foreground": "#c79595",
+          "foreground": "#eb6f92",
           "type": "status",
           "style": "plain"
         },
         {
-          "properties": {
-            "style": "austin",
-            "threshold": 1
-          },
+          "properties": { "style": "austin", "threshold": 1 },
           "template": " ({{ .FormattedMs }}) ",
-          "foreground": "#44484b",
+          "foreground": "#6e6a86",
           "powerline_symbol": "\ue0c4",
           "type": "executiontime",
           "style": "plain"
@@ -69,7 +56,7 @@
             "extensions": [".zip", ".tar.gz", ".tar", ".7z", ".rar"]
           },
           "template": " {{ .FileName }} ",
-          "foreground": "#95aec7",
+          "foreground": "#9ccfd8",
           "type": "command",
           "style": "plain"
         }
@@ -80,11 +67,9 @@
       "alignment": "left",
       "segments": [
         {
-          "properties": {
-            "always_enabled": true
-          },
+          "properties": { "always_enabled": true },
           "template": "❯ ",
-          "foreground": "#95c7ae",
+          "foreground": "#3e8fb0",
           "type": "status",
           "style": "plain",
           "foreground_templates": ["{{ if gt .Code 0 }}#c795ae{{ end }}"]
