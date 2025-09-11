@@ -14,7 +14,7 @@
         {
           "properties": { "style": "full" },
           "template": " \uf07b {{ .Path }} ",
-          "foreground": "#ea9a97",
+          "foreground": "#95aec7",
           "type": "path",
           "style": "plain"
         },
@@ -25,28 +25,28 @@
             "fetch_status": true,
             "fetch_worktree_count": true
           },
-          "template": "git:({{ if or (.Working.Changed) (.Staging.Changed) }}<#f6c177>{{ .HEAD }}</>{{ else }}<#c4a7e7>{{ .HEAD }}</>{{ end }}{{ if (gt .Ahead 0) }} <#9ccfd8>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0) }} <#eb6f92>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <#c4a7e7>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <#eb6f92>{{ .Working.String }}</>{{ end }}{{ if gt .StashCount 0 }} <#e0def4>*{{ .StashCount }}</>{{ end }})",
-          "foreground": "#3e8fb0",
+          "template": "git:({{ if or (.Working.Changed) (.Staging.Changed) }}<#c7c795>{{ .HEAD }}</>{{ else }}<#ae95c7>{{ .HEAD }}</>{{ end }}{{ if (gt .Ahead 0) }} <#aec795>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0) }} <#c79595>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <#ae95c7>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <#c79595>{{ .Working.String }}</>{{ end }}{{ if gt .StashCount 0 }} <#c7ccd1>*{{ .StashCount }}</>{{ end }})",
+          "foreground": "#c79595",
           "type": "git",
           "style": "plain"
         },
         {
           "type": "python",
           "style": "plain",
-          "foreground": "#c4a7e7",
+          "foreground": "#ae95c7",
           "properties": { "display_mode": "environment" },
           "template": "  {{ .Venv }} "
         },
         {
           "template": " {{ .Code }} ",
-          "foreground": "#eb6f92",
+          "foreground": "#c795ae",
           "type": "status",
           "style": "plain"
         },
         {
           "properties": { "style": "austin", "threshold": 1 },
           "template": " ({{ .FormattedMs }}) ",
-          "foreground": "#6e6a86",
+          "foreground": "#44484b",
           "powerline_symbol": "\ue0c4",
           "type": "executiontime",
           "style": "plain"
@@ -56,7 +56,7 @@
             "extensions": [".zip", ".tar.gz", ".tar", ".7z", ".rar"]
           },
           "template": " {{ .FileName }} ",
-          "foreground": "#9ccfd8",
+          "foreground": "#95aec7",
           "type": "command",
           "style": "plain"
         }
@@ -69,7 +69,7 @@
         {
           "properties": { "always_enabled": true },
           "template": "❯ ",
-          "foreground": "#3e8fb0",
+          "foreground": "#95aec7",
           "type": "status",
           "style": "plain",
           "foreground_templates": ["{{ if gt .Code 0 }}#c795ae{{ end }}"]
