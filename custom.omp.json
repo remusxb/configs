@@ -25,7 +25,7 @@
             "fetch_status": true,
             "fetch_worktree_count": true
           },
-          "template": "git:({{ if or (.Working.Changed) (.Staging.Changed) }}<#c7c795>{{ .HEAD }}</>{{ else }}<#ae95c7>{{ .HEAD }}</>{{ end }}{{ if (gt .Ahead 0) }} <#aec795>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0) }} <#c79595>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <#c7c795>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <#c79595>{{ .Working.String }}</>{{ end }}{{ if gt .StashCount 0 }} <#c7ccd1>*{{ .StashCount }}</>{{ end }})",
+          "template": "git:({{ if or (.Working.Changed) (.Staging.Changed) }}<#c7c795>{{ .HEAD }}</>{{ else }}<#ae95c7>{{ .HEAD }}</>{{ end }}{{ if (gt .Ahead 0) }} <#aec795>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0) }} <#c7c795>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <#c7c795>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <#c79595>{{ .Working.String }}</>{{ end }}{{ if gt .StashCount 0 }} <#c7ccd1>*{{ .StashCount }}</>{{ end }})",
           "foreground": "#c79595",
           "type": "git",
           "style": "plain"
