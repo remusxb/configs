@@ -126,4 +126,18 @@ eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/custom.omp.json)"
 
 ######## gRPC ########
 export PATH="$PATH:$(go env GOPATH)/bin"
-#export PATH=$PATH:$GOPATH/bin
+
+######## cruft ########
+export PATH="$PATH:/Users/remus/Library/Python/3.9/bin"
+
+######## Cursor CLI ########
+export PATH="$HOME/.local/bin:$PATH"
+
+
+# Paths to JDKs
+export JAVA_HOME=$(/usr/libexec/java_home -v 24)
+export PATH=$JAVA_HOME/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
