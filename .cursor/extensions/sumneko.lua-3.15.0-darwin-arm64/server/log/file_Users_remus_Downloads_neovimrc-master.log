@@ -1,0 +1,1081 @@
+[13:29:06.673][info] [#0:/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/main.lua:68]: Lua Lsp startup, root: 	/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server
+[13:29:06.674][info] [#0:/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/main.lua:69]: ROOT:	/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server
+[13:29:06.674][info] [#0:/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/main.lua:70]: LOGPATH:	/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/log
+[13:29:06.674][info] [#0:/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/main.lua:71]: METAPATH:	/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta
+[13:29:06.674][info] [#0:/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/main.lua:72]: VERSION:	3.15.0
+[13:29:06.699][info] [#0:script/proto/proto.lua:260]: Listen Mode: stdio
+[13:29:06.700][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 2.265 MB
+        # 00 : 2.265 MB
+        # 01 : 0.000 MB
+        # 02 : 0.000 MB
+        # 03 : 0.000 MB
+        # 04 : 0.000 MB
+    --------------- Coroutine ---------------
+        Total:     0
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      0
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[13:29:06.803][info] [#0:script/client.lua:657]: Client init	{
+  capabilities = {
+    general = {
+      markdown = {
+        allowedTags = { "ul", "li", "p", "code", "blockquote", "ol", "h1", "h2", "h3", "h4", "h5", "h6", "hr", "em", "pre", "table", "thead", "tbody", "tr", "th", "td", "div", "del", "a", "strong", "br", "img", "span" },
+        parser = "marked",
+        version = "1.1.0"
+      },
+      positionEncodings = { "utf-16" },
+      regularExpressions = {
+        engine = "ECMAScript",
+        version = "ES2020"
+      },
+      staleRequestSupport = {
+        cancel = true,
+        retryOnContentModified = { "textDocument/semanticTokens/full", "textDocument/semanticTokens/range", "textDocument/semanticTokens/full/delta" }
+      }
+    },
+    notebookDocument = {
+      synchronization = {
+        dynamicRegistration = true,
+        executionSummarySupport = true
+      }
+    },
+    textDocument = {
+      callHierarchy = {
+        dynamicRegistration = true
+      },
+      codeAction = {
+        codeActionLiteralSupport = {
+          codeActionKind = {
+            valueSet = { "", "quickfix", "refactor", "refactor.extract", "refactor.inline", "refactor.rewrite", "source", "source.organizeImports" }
+          }
+        },
+        dataSupport = true,
+        disabledSupport = true,
+        dynamicRegistration = true,
+        honorsChangeAnnotations = true,
+        isPreferredSupport = true,
+        resolveSupport = {
+          properties = { "edit" }
+        }
+      },
+      codeLens = {
+        dynamicRegistration = true
+      },
+      colorProvider = {
+        dynamicRegistration = true
+      },
+      completion = {
+        completionItem = {
+          commitCharactersSupport = true,
+          deprecatedSupport = true,
+          documentationFormat = { "markdown", "plaintext" },
+          insertReplaceSupport = true,
+          insertTextModeSupport = {
+            valueSet = { 1, 2 }
+          },
+          labelDetailsSupport = true,
+          preselectSupport = true,
+          resolveSupport = {
+            properties = { "documentation", "detail", "additionalTextEdits" }
+          },
+          snippetSupport = true,
+          tagSupport = {
+            valueSet = { 1 }
+          }
+        },
+        completionItemKind = {
+          valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 }
+        },
+        completionList = {
+          itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+        },
+        contextSupport = true,
+        dynamicRegistration = true,
+        insertTextMode = 2
+      },
+      declaration = {
+        dynamicRegistration = true,
+        linkSupport = true
+      },
+      definition = {
+        dynamicRegistration = true,
+        linkSupport = true
+      },
+      diagnostic = {
+        dynamicRegistration = true,
+        relatedDocumentSupport = false
+      },
+      documentHighlight = {
+        dynamicRegistration = true
+      },
+      documentLink = {
+        dynamicRegistration = true,
+        tooltipSupport = true
+      },
+      documentSymbol = {
+        dynamicRegistration = true,
+        hierarchicalDocumentSymbolSupport = true,
+        labelSupport = true,
+        symbolKind = {
+          valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 }
+        },
+        tagSupport = {
+          valueSet = { 1 }
+        }
+      },
+      foldingRange = {
+        dynamicRegistration = true,
+        foldingRange = {
+          collapsedText = false
+        },
+        foldingRangeKind = {
+          valueSet = { "comment", "imports", "region" }
+        },
+        lineFoldingOnly = true,
+        rangeLimit = 5000
+      },
+      formatting = {
+        dynamicRegistration = true
+      },
+      hover = {
+        contentFormat = { "markdown", "plaintext" },
+        dynamicRegistration = true
+      },
+      implementation = {
+        dynamicRegistration = true,
+        linkSupport = true
+      },
+      inlayHint = {
+        dynamicRegistration = true,
+        resolveSupport = {
+          properties = { "tooltip", "textEdits", "label.tooltip", "label.location", "label.command" }
+        }
+      },
+      inlineValue = {
+        dynamicRegistration = true
+      },
+      linkedEditingRange = {
+        dynamicRegistration = true
+      },
+      onTypeFormatting = {
+        dynamicRegistration = true
+      },
+      publishDiagnostics = {
+        codeDescriptionSupport = true,
+        dataSupport = true,
+        relatedInformation = true,
+        tagSupport = {
+          valueSet = { 1, 2 }
+        },
+        versionSupport = false
+      },
+      rangeFormatting = {
+        dynamicRegistration = true,
+        rangesSupport = true
+      },
+      references = {
+        dynamicRegistration = true
+      },
+      rename = {
+        dynamicRegistration = true,
+        honorsChangeAnnotations = true,
+        prepareSupport = true,
+        prepareSupportDefaultBehavior = 1
+      },
+      selectionRange = {
+        dynamicRegistration = true
+      },
+      semanticTokens = {
+        augmentsSyntaxTokens = true,
+        dynamicRegistration = true,
+        formats = { "relative" },
+        multilineTokenSupport = false,
+        overlappingTokenSupport = false,
+        requests = {
+          full = {
+            delta = true
+          },
+          range = true
+        },
+        serverCancelSupport = true,
+        tokenModifiers = { "declaration", "definition", "readonly", "static", "deprecated", "abstract", "async", "modification", "documentation", "defaultLibrary" },
+        tokenTypes = { "namespace", "type", "class", "enum", "interface", "struct", "typeParameter", "parameter", "variable", "property", "enumMember", "event", "function", "method", "macro", "keyword", "modifier", "comment", "string", "number", "regexp", "operator", "decorator" }
+      },
+      signatureHelp = {
+        contextSupport = true,
+        dynamicRegistration = true,
+        signatureInformation = {
+          activeParameterSupport = true,
+          documentationFormat = { "markdown", "plaintext" },
+          parameterInformation = {
+            labelOffsetSupport = true
+          }
+        }
+      },
+      synchronization = {
+        didSave = true,
+        dynamicRegistration = true,
+        willSave = true,
+        willSaveWaitUntil = true
+      },
+      typeDefinition = {
+        dynamicRegistration = true,
+        linkSupport = true
+      },
+      typeHierarchy = {
+        dynamicRegistration = true
+      }
+    },
+    window = {
+      showDocument = {
+        support = true
+      },
+      showMessage = {
+        messageActionItem = {
+          additionalPropertiesSupport = true
+        }
+      },
+      workDoneProgress = true
+    },
+    workspace = {
+      applyEdit = true,
+      codeLens = {
+        refreshSupport = true
+      },
+      configuration = true,
+      diagnostics = {
+        refreshSupport = true
+      },
+      didChangeConfiguration = {
+        dynamicRegistration = true
+      },
+      didChangeWatchedFiles = {
+        dynamicRegistration = true,
+        relativePatternSupport = true
+      },
+      executeCommand = {
+        dynamicRegistration = true
+      },
+      fileOperations = {
+        didCreate = true,
+        didDelete = true,
+        didRename = true,
+        dynamicRegistration = true,
+        willCreate = true,
+        willDelete = true,
+        willRename = true
+      },
+      foldingRange = {
+        refreshSupport = true
+      },
+      inlayHint = {
+        refreshSupport = true
+      },
+      inlineValue = {
+        refreshSupport = true
+      },
+      semanticTokens = {
+        refreshSupport = true
+      },
+      symbol = {
+        dynamicRegistration = true,
+        resolveSupport = {
+          properties = { "location.range" }
+        },
+        symbolKind = {
+          valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 }
+        },
+        tagSupport = {
+          valueSet = { 1 }
+        }
+      },
+      workspaceEdit = {
+        changeAnnotationSupport = {
+          groupsOnLabel = true
+        },
+        documentChanges = true,
+        failureHandling = "textOnlyTransactional",
+        normalizesLineEndings = true,
+        resourceOperations = { "create", "rename", "delete" }
+      },
+      workspaceFolders = true
+    }
+  },
+  clientInfo = {
+    name = "Cursor",
+    version = "1.99.3"
+  },
+  initializationOptions = {
+    changeConfiguration = true,
+    codeLensViewReferences = true,
+    fixIndents = true,
+    languageConfiguration = true,
+    statusBar = true,
+    storagePath = "/Users/remus/Library/Application Support/Cursor/User/globalStorage/sumneko.lua",
+    trustByClient = true,
+    useSemanticByRange = true,
+    viewDocument = true
+  },
+  locale = "en",
+  processId = 49029,
+  rootPath = "/Users/remus/Downloads/neovimrc-master",
+  rootUri = "file:///Users/remus/Downloads/neovimrc-master",
+  trace = "off",
+  workDoneToken = "9f26d493-d2ee-4c1f-9f26-4ecf6a666e61",
+  workspaceFolders = { {
+      name = "neovimrc-master",
+      uri = "file:///Users/remus/Downloads/neovimrc-master"
+    } }
+}
+[13:29:06.804][info] [#0:script/language.lua:137]: VSC language: en
+[13:29:06.804][info] [#0:script/language.lua:138]: LS  language: en-us
+[13:29:06.804][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///Users/remus/Downloads/neovimrc-master
+[13:29:06.804][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/log/file_Users_remus_Downloads_neovimrc-master.log
+[13:29:06.804][info] [#0:script/workspace/workspace.lua:48]: Workspace create: 	file:///Users/remus/Downloads/neovimrc-master
+[13:29:07.427][info] [#0:script/provider/provider.lua:49]: Load config from client	file:///Users/remus/Downloads/neovimrc-master
+[13:29:07.427][info] [#0:script/provider/provider.lua:50]: {
+  Lua = {
+    addonManager = {
+      enable = true,
+      repositoryBranch = "",
+      repositoryPath = ""
+    },
+    addonRepositoryPath = "",
+    codeLens = {
+      enable = false
+    },
+    completion = {
+      autoRequire = true,
+      callSnippet = "Disable",
+      displayContext = 0,
+      enable = true,
+      keywordSnippet = "Replace",
+      postfix = "@",
+      requireSeparator = ".",
+      showParams = true,
+      showWord = "Fallback",
+      workspaceWord = true
+    },
+    diagnostics = {
+      disable = {},
+      disableScheme = { "git" },
+      enable = true,
+      globals = {},
+      globalsRegex = {},
+      groupFileStatus = {},
+      groupSeverity = {},
+      ignoredFiles = "Opened",
+      libraryFiles = "Opened",
+      neededFileStatus = {},
+      severity = {},
+      unusedLocalExclude = {},
+      workspaceDelay = 3000,
+      workspaceEvent = "OnSave",
+      workspaceRate = 100
+    },
+    doc = {
+      packageName = {},
+      privateName = {},
+      protectedName = {},
+      regengine = "glob"
+    },
+    docScriptPath = "",
+    format = {
+      defaultConfig = {},
+      enable = true
+    },
+    hint = {
+      arrayIndex = "Auto",
+      await = true,
+      awaitPropagate = false,
+      enable = false,
+      paramName = "All",
+      paramType = true,
+      semicolon = "SameLine",
+      setType = false
+    },
+    hover = {
+      enable = true,
+      enumsLimit = 5,
+      expandAlias = true,
+      previewFields = 10,
+      viewNumber = true,
+      viewString = true,
+      viewStringMax = 1000
+    },
+    language = {
+      completeAnnotation = true,
+      fixIndent = true
+    },
+    misc = {
+      executablePath = "",
+      parameters = {}
+    },
+    nameStyle = {
+      config = {}
+    },
+    runtime = {
+      builtin = {},
+      fileEncoding = "utf8",
+      meta = "${version} ${language} ${encoding}",
+      nonstandardSymbol = {},
+      path = { "?.lua", "?/init.lua" },
+      pathStrict = false,
+      plugin = "",
+      pluginArgs = {},
+      special = {},
+      unicodeName = false,
+      version = "Lua 5.4"
+    },
+    semantic = {
+      annotation = true,
+      enable = true,
+      keyword = false,
+      variable = true
+    },
+    signatureHelp = {
+      enable = true
+    },
+    spell = {
+      dict = {}
+    },
+    type = {
+      castNumberToInteger = true,
+      checkTableShape = false,
+      inferParamType = false,
+      inferTableSize = 10,
+      maxUnionVariants = 0,
+      weakNilCheck = false,
+      weakUnionCheck = false
+    },
+    typeFormat = {
+      config = {}
+    },
+    window = {
+      progressBar = true,
+      statusBar = true
+    },
+    workspace = {
+      checkThirdParty = "",
+      ignoreDir = { ".vscode" },
+      ignoreSubmodules = true,
+      library = {},
+      maxPreload = 5000,
+      preloadFileSize = 500,
+      useGitIgnore = true,
+      userThirdParty = {}
+    }
+  },
+  ["editor.acceptSuggestionOnEnter"] = "on",
+  ["editor.semanticHighlighting.enabled"] = "configuredByTheme",
+  ["files.associations"] = {},
+  ["files.exclude"] = {
+    ["**/.DS_Store"] = true,
+    ["**/.git"] = true,
+    ["**/.hg"] = true,
+    ["**/.svn"] = true,
+    ["**/Thumbs.db"] = true
+  }
+}
+[13:29:07.427][info] [#0:script/provider/completion.lua:43]: Enable completion.
+[13:29:07.531][info] [#0:script/provider/provider.lua:65]: Load config from client	fallback
+[13:29:07.532][info] [#0:script/provider/provider.lua:66]: {
+  Lua = {
+    addonManager = {
+      enable = true,
+      repositoryBranch = "",
+      repositoryPath = ""
+    },
+    addonRepositoryPath = "",
+    codeLens = {
+      enable = false
+    },
+    completion = {
+      autoRequire = true,
+      callSnippet = "Disable",
+      displayContext = 0,
+      enable = true,
+      keywordSnippet = "Replace",
+      postfix = "@",
+      requireSeparator = ".",
+      showParams = true,
+      showWord = "Fallback",
+      workspaceWord = true
+    },
+    diagnostics = {
+      disable = {},
+      disableScheme = { "git" },
+      enable = true,
+      globals = {},
+      globalsRegex = {},
+      groupFileStatus = {},
+      groupSeverity = {},
+      ignoredFiles = "Opened",
+      libraryFiles = "Opened",
+      neededFileStatus = {},
+      severity = {},
+      unusedLocalExclude = {},
+      workspaceDelay = 3000,
+      workspaceEvent = "OnSave",
+      workspaceRate = 100
+    },
+    doc = {
+      packageName = {},
+      privateName = {},
+      protectedName = {},
+      regengine = "glob"
+    },
+    docScriptPath = "",
+    format = {
+      defaultConfig = {},
+      enable = true
+    },
+    hint = {
+      arrayIndex = "Auto",
+      await = true,
+      awaitPropagate = false,
+      enable = false,
+      paramName = "All",
+      paramType = true,
+      semicolon = "SameLine",
+      setType = false
+    },
+    hover = {
+      enable = true,
+      enumsLimit = 5,
+      expandAlias = true,
+      previewFields = 10,
+      viewNumber = true,
+      viewString = true,
+      viewStringMax = 1000
+    },
+    language = {
+      completeAnnotation = true,
+      fixIndent = true
+    },
+    misc = {
+      executablePath = "",
+      parameters = {}
+    },
+    nameStyle = {
+      config = {}
+    },
+    runtime = {
+      builtin = {},
+      fileEncoding = "utf8",
+      meta = "${version} ${language} ${encoding}",
+      nonstandardSymbol = {},
+      path = { "?.lua", "?/init.lua" },
+      pathStrict = false,
+      plugin = "",
+      pluginArgs = {},
+      special = {},
+      unicodeName = false,
+      version = "Lua 5.4"
+    },
+    semantic = {
+      annotation = true,
+      enable = true,
+      keyword = false,
+      variable = true
+    },
+    signatureHelp = {
+      enable = true
+    },
+    spell = {
+      dict = {}
+    },
+    type = {
+      castNumberToInteger = true,
+      checkTableShape = false,
+      inferParamType = false,
+      inferTableSize = 10,
+      maxUnionVariants = 0,
+      weakNilCheck = false,
+      weakUnionCheck = false
+    },
+    typeFormat = {
+      config = {}
+    },
+    window = {
+      progressBar = true,
+      statusBar = true
+    },
+    workspace = {
+      checkThirdParty = "",
+      ignoreDir = { ".vscode" },
+      ignoreSubmodules = true,
+      library = {},
+      maxPreload = 5000,
+      preloadFileSize = 500,
+      useGitIgnore = true,
+      userThirdParty = {}
+    }
+  },
+  ["editor.acceptSuggestionOnEnter"] = "on",
+  ["editor.semanticHighlighting.enabled"] = "configuredByTheme",
+  ["files.associations"] = {},
+  ["files.exclude"] = {
+    ["**/.DS_Store"] = true,
+    ["**/.git"] = true,
+    ["**/.hg"] = true,
+    ["**/.svn"] = true,
+    ["**/Thumbs.db"] = true
+  }
+}
+[13:29:07.747][info] [#0:script/plugin.lua:125]: plugin path:	/Users/remus/Downloads/neovimrc-master
+[13:29:07.747][warn] [#0:script/plugin.lua:140]: plugin not found:	/Users/remus/Downloads/neovimrc-master
+[13:29:07.747][info] [#0:script/library.lua:212]: Init builtin library at:	file:///Users/remus/Downloads/neovimrc-master
+[13:29:07.756][info] [#0:script/library.lua:212]: Init builtin library at:	nil
+[13:29:07.867][info] [#0:script/workspace/workspace.lua:330]: Preload start:	file:///Users/remus/Downloads/neovimrc-master
+[13:29:07.868][info] [#0:script/workspace/workspace.lua:336]: Scan files at:	file:///Users/remus/Downloads/neovimrc-master
+[13:29:07.868][info] [#0:script/workspace/workspace.lua:330]: Preload start:	<fallback>
+[13:29:07.869][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/table.lua
+[13:29:07.869][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[13:29:07.869][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/package.lua
+[13:29:07.869][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[13:29:07.870][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[13:29:07.870][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/math.lua
+[13:29:07.870][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/io.lua
+[13:29:07.870][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[13:29:07.870][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/string.lua
+[13:29:07.870][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[13:29:07.870][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/os.lua
+[13:29:07.871][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/table.lua
+[13:29:07.871][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[13:29:07.871][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/package.lua
+[13:29:07.871][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[13:29:07.871][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[13:29:07.871][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/math.lua
+[13:29:07.871][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/io.lua
+[13:29:07.871][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[13:29:07.871][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/string.lua
+[13:29:07.871][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[13:29:07.872][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/os.lua
+[13:29:07.973][info] [#0:script/workspace/workspace.lua:385]: Found 11 files at:	<fallback>
+[13:29:07.973][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	<fallback>
+[13:29:07.973][info] [#0:script/workspace/workspace.lua:385]: Found 70 files at:	file:///Users/remus/Downloads/neovimrc-master
+[13:29:07.973][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///Users/remus/Downloads/neovimrc-master
+[13:29:07.974][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/remus/Downloads/neovimrc-master/nvim/init.lua
+[13:29:07.974][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/config/keymaps.lua
+[13:29:07.974][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/config/plugin-keymaps.lua
+[13:29:07.974][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/os.lua , size = 5.875 KB
+[13:29:07.976][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/os.lua
+[13:29:07.976][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/os.lua
+[13:29:07.976][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/debug.lua , size = 7.812 KB
+[13:29:07.979][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[13:29:07.979][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[13:29:07.979][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/string.lua , size = 5.401 KB
+[13:29:07.981][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/string.lua
+[13:29:07.981][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/string.lua
+[13:29:07.981][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/basic.lua , size = 16.192 KB
+[13:29:07.986][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[13:29:07.986][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[13:29:07.986][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/io.lua , size = 6.566 KB
+[13:29:07.987][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/io.lua
+[13:29:07.987][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/math.lua , size = 8.858 KB
+[13:29:07.989][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/math.lua
+[13:29:07.989][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/math.lua
+[13:29:07.989][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/builtin.lua , size = 0.302 KB
+[13:29:07.990][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[13:29:07.990][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[13:29:07.990][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua , size = 2.669 KB
+[13:29:07.991][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[13:29:07.991][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[13:29:07.991][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/package.lua , size = 3.050 KB
+[13:29:07.993][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/package.lua
+[13:29:07.993][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/package.lua
+[13:29:07.993][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/utf8.lua , size = 2.447 KB
+[13:29:07.994][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[13:29:07.994][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/io.lua
+[13:29:07.994][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[13:29:07.994][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/table.lua , size = 4.551 KB
+[13:29:07.995][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/table.lua
+[13:29:07.995][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/table.lua
+[13:29:07.995][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/init.lua , size = 0.024 KB
+[13:29:07.995][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/config/autocmds.lua , size = 1.820 KB
+[13:29:07.996][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/init.lua
+[13:29:07.996][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/config/options.lua , size = 1.165 KB
+[13:29:07.996][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/aerial.lua , size = 1.749 KB
+[13:29:07.997][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/autotag.lua , size = 0.330 KB
+[13:29:07.997][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/zenmode.lua , size = 0.605 KB
+[13:29:07.997][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/formatting.lua , size = 1.151 KB
+[13:29:07.997][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/telescope.lua , size = 2.223 KB
+[13:29:07.998][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/linting.lua , size = 0.829 KB
+[13:29:07.998][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/nvim-cmp.lua , size = 1.428 KB
+[13:29:07.999][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/trouble.lua , size = 0.047 KB
+[13:29:07.999][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/lsp.lua
+[13:29:07.999][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/treesitter-context.lua , size = 0.838 KB
+[13:29:07.999][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/cloak.lua , size = 0.312 KB
+[13:29:07.999][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/which-key.lua
+[13:29:07.999][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/colorscheme.lua , size = 1.155 KB
+[13:29:08.000][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/illuminate.lua , size = 1.160 KB
+[13:29:08.000][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/gitsigns.lua , size = 3.505 KB
+[13:29:08.001][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[13:29:08.001][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/treesitter.lua , size = 2.570 KB
+[13:29:08.001][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/dap.lua , size = 4.271 KB
+[13:29:08.003][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/toggleterm.lua , size = 2.291 KB
+[13:29:08.003][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/neotest.lua , size = 2.544 KB
+[13:29:08.004][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/init.lua , size = 2.078 KB
+[13:29:08.006][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/lazy_init.lua , size = 1.078 KB
+[13:29:08.006][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/packer.lua , size = 1.923 KB
+[13:29:08.007][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/set.lua , size = 0.545 KB
+[13:29:08.007][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/remap.lua , size = 1.715 KB
+[13:29:08.008][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/lazy/zenmode.lua , size = 0.888 KB
+[13:29:08.008][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/lazy/snippets.lua , size = 0.975 KB
+[13:29:08.008][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/lazy/init.lua , size = 0.180 KB
+[13:29:08.008][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/lazy/colors.lua , size = 1.561 KB
+[13:29:08.009][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/lazy/telescope.lua , size = 0.897 KB
+[13:29:08.009][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/lazy/lsp.lua
+[13:29:08.009][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/lazy/trouble.lua , size = 0.575 KB
+[13:29:08.009][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/lazy/neogen.lua , size = 0.587 KB
+[13:29:08.010][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/lazy/cloak.lua , size = 0.933 KB
+[13:29:08.010][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/lazy/fugitive.lua , size = 1.288 KB
+[13:29:08.010][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/lazy/local.lua , size = 1.015 KB
+[13:29:08.011][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/lazy/treesitter.lua , size = 1.725 KB
+[13:29:08.011][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/lazy/neotest.lua , size = 1.012 KB
+[13:29:08.011][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/lua/theprimeagen/lazy/undotree.lua , size = 0.132 KB
+[13:29:08.011][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim_config-main/init.lua , size = 0.799 KB
+[13:29:08.012][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim_config-main/lua/themes.lua , size = 1.652 KB
+[13:29:08.012][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim_config-main/lua/plugins/init.lua , size = 3.846 KB
+[13:29:08.013][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim_config-main/lua/mappings.lua , size = 4.475 KB
+[13:29:08.014][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim_config-main/lua/configs/aerial.lua , size = 1.226 KB
+[13:29:08.014][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim_config-main/lua/configs/lspconfig.lua , size = 1.258 KB
+[13:29:08.015][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim_config-main/lua/configs/ts_autotag.lua , size = 0.479 KB
+[13:29:08.015][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim_config-main/lua/configs/overrides.lua , size = 2.250 KB
+[13:29:08.121][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.045] sec: <fallback>
+[13:29:08.121][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: <fallback>
+[13:29:08.121][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	<fallback>
+[13:29:08.121][info] [#0:script/workspace/workspace.lua:387]: Preload finish at:	<fallback>
+[13:29:08.124][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim_config-main/lua/configs/conform.lua , size = 0.532 KB
+[13:29:08.124][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim_config-main/lua/configs/illuminate.lua , size = 2.901 KB
+[13:29:08.125][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim_config-main/lua/configs/lazy.lua , size = 0.822 KB
+[13:29:08.125][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim_config-main/lua/options.lua , size = 1.086 KB
+[13:29:08.125][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/Downloads/neovimrc-master/nvim_config-main/lua/chadrc.lua , size = 2.528 KB
+[13:29:08.231][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.050] sec: file:///Users/remus/Downloads/neovimrc-master
+[13:29:08.232][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///Users/remus/Downloads/neovimrc-master
+[13:29:08.232][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///Users/remus/Downloads/neovimrc-master
+[13:29:08.232][info] [#0:script/workspace/workspace.lua:387]: Preload finish at:	file:///Users/remus/Downloads/neovimrc-master
+[13:29:08.244][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[13:29:08.388][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.141] sec.
+[13:29:09.859][warn] [#0:script/pub/report.lua:24]: Load proto error:	Disconnected!
+[13:34:39.232][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[13:34:39.376][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.142] sec.
+[13:34:46.250][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[13:34:46.366][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.115] sec.
+[13:39:06.702][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 13.409 MB
+        # 00 : 13.097 MB
+        # 01 : 0.104 MB
+        # 02 : 0.053 MB
+        # 03 : 0.102 MB
+        # 04 : 0.053 MB
+    --------------- Coroutine ---------------
+        Total:     5
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      5
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[13:40:04.691][info] [#0:script/provider/diagnostic.lua:171]: clearDiagnostics	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[13:40:08.422][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[13:40:08.546][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.124] sec.
+[13:40:14.757][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[13:40:14.887][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.130] sec.
+[13:40:32.445][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[13:40:32.572][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.127] sec.
+[13:42:18.748][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[13:42:18.891][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.142] sec.
+[13:42:40.299][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[13:42:40.440][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.142] sec.
+[13:42:43.436][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[13:42:43.563][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.128] sec.
+[13:46:16.615][info] [#0:script/provider/diagnostic.lua:171]: clearDiagnostics	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[13:46:19.639][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[13:46:19.790][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.151] sec.
+[13:46:22.837][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[13:46:22.963][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.126] sec.
+[13:48:45.633][info] [#0:script/provider/diagnostic.lua:171]: clearDiagnostics	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[13:48:49.425][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[13:48:49.562][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.137] sec.
+[13:49:07.379][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 12.788 MB
+        # 00 : 12.475 MB
+        # 01 : 0.104 MB
+        # 02 : 0.053 MB
+        # 03 : 0.102 MB
+        # 04 : 0.053 MB
+    --------------- Coroutine ---------------
+        Total:     1
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      1
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[13:51:20.497][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[13:51:20.633][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.136] sec.
+[13:51:23.639][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[13:51:23.775][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.135] sec.
+[13:59:07.399][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 13.609 MB
+        # 00 : 13.296 MB
+        # 01 : 0.104 MB
+        # 02 : 0.053 MB
+        # 03 : 0.102 MB
+        # 04 : 0.053 MB
+    --------------- Coroutine ---------------
+        Total:     5
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      5
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[14:15:59.175][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 13.764 MB
+        # 00 : 13.451 MB
+        # 01 : 0.104 MB
+        # 02 : 0.053 MB
+        # 03 : 0.102 MB
+        # 04 : 0.053 MB
+    --------------- Coroutine ---------------
+        Total:     5
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      5
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[14:31:35.852][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 13.808 MB
+        # 00 : 13.496 MB
+        # 01 : 0.104 MB
+        # 02 : 0.053 MB
+        # 03 : 0.102 MB
+        # 04 : 0.053 MB
+    --------------- Coroutine ---------------
+        Total:     5
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      5
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[14:48:57.176][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 13.852 MB
+        # 00 : 13.540 MB
+        # 01 : 0.104 MB
+        # 02 : 0.053 MB
+        # 03 : 0.102 MB
+        # 04 : 0.053 MB
+    --------------- Coroutine ---------------
+        Total:     5
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      5
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[14:53:25.326][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[14:53:25.465][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.137] sec.
+[14:53:34.709][info] [#0:script/provider/diagnostic.lua:171]: clearDiagnostics	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[14:53:37.891][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[14:53:38.027][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.136] sec.
+[14:53:47.413][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[14:53:47.559][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.146] sec.
+[14:55:31.342][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[14:55:31.487][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.144] sec.
+[14:55:32.129][info] [#0:script/provider/diagnostic.lua:171]: clearDiagnostics	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[14:55:35.805][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[14:55:35.944][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.138] sec.
+[14:55:42.076][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[14:55:42.204][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.128] sec.
+[14:55:45.038][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[14:55:45.153][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.114] sec.
+[14:58:57.520][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 15.181 MB
+        # 00 : 14.869 MB
+        # 01 : 0.104 MB
+        # 02 : 0.053 MB
+        # 03 : 0.102 MB
+        # 04 : 0.053 MB
+    --------------- Coroutine ---------------
+        Total:     41
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      41
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[14:59:58.068][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[14:59:58.210][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.141] sec.
+[15:00:03.882][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[15:00:04.016][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.134] sec.
+[15:00:07.820][info] [#0:script/workspace/workspace.lua:290]: Scan files at:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:00:07.820][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:00:07.926][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:00:08.035][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.005] sec: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:00:08.035][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:00:08.035][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:00:08.663][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[71]
+[15:00:09.818][info] [#0:script/workspace/workspace.lua:290]: Scan files at:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:00:09.818][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:00:09.818][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:00:09.818][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.000] sec: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:00:09.818][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:00:09.818][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:00:09.929][info] [#0:script/provider/diagnostic.lua:171]: clearDiagnostics	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:00:11.400][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[71]
+[15:00:11.528][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.129] sec.
+[15:00:13.018][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[71]
+[15:00:13.149][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.132] sec.
+[15:03:43.334][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[71]
+[15:03:43.474][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.139] sec.
+[15:03:58.481][info] [#0:script/provider/diagnostic.lua:171]: clearDiagnostics	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[15:04:00.665][info] [#0:script/provider/diagnostic.lua:171]: clearDiagnostics	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/linting.lua
+[15:04:01.496][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[69]
+[15:04:01.637][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.141] sec.
+[15:04:01.856][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[69]
+[15:04:03.727][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[68]
+[15:04:03.870][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[68]
+[15:04:04.001][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.130] sec.
+[15:04:05.698][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[68]
+[15:04:05.698][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[68]
+[15:04:05.819][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.121] sec.
+[15:08:03.673][info] [#0:script/workspace/workspace.lua:290]: Scan files at:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[15:08:03.675][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[15:08:03.675][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[15:08:03.675][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.000] sec: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[15:08:03.675][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[15:08:03.675][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[15:08:04.096][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[69]
+[15:08:04.239][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.143] sec.
+[15:08:04.985][info] [#0:script/provider/diagnostic.lua:171]: clearDiagnostics	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[15:08:05.713][info] [#0:script/workspace/workspace.lua:290]: Scan files at:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[15:08:05.714][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[15:08:05.714][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[15:08:05.714][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.000] sec: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[15:08:05.714][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[15:08:05.714][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason.lua
+[15:08:06.335][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[69]
+[15:08:06.474][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.138] sec.
+[15:08:08.044][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[69]
+[15:08:08.159][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.115] sec.
+[15:08:15.705][info] [#0:script/workspace/workspace.lua:290]: Scan files at:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/linting.lua
+[15:08:15.705][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/linting.lua
+[15:08:15.705][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/linting.lua
+[15:08:15.705][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.000] sec: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/linting.lua
+[15:08:15.705][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/linting.lua
+[15:08:15.705][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/linting.lua
+[15:08:17.681][info] [#0:script/workspace/workspace.lua:290]: Scan files at:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/linting.lua
+[15:08:17.681][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/linting.lua
+[15:08:17.681][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/linting.lua
+[15:08:17.681][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.000] sec: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/linting.lua
+[15:08:17.681][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/linting.lua
+[15:08:17.681][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/linting.lua
+[15:08:18.507][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[70]
+[15:08:18.635][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.128] sec.
+[15:08:19.681][info] [#0:script/workspace/workspace.lua:290]: Scan files at:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:08:19.681][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:08:19.681][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:08:19.681][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.000] sec: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:08:19.681][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:08:19.681][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:08:20.308][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[71]
+[15:08:20.443][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.135] sec.
+[15:08:20.760][info] [#0:script/workspace/workspace.lua:290]: Scan files at:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:08:20.760][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:08:20.760][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:08:20.760][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.000] sec: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:08:20.760][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:08:20.760][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:08:20.972][info] [#0:script/provider/diagnostic.lua:171]: clearDiagnostics	file:///Users/remus/Downloads/neovimrc-master/nvim/lua/plugins/config/mason-nvim-lint.lua
+[15:08:22.370][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[71]
+[15:08:22.509][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.139] sec.
+[15:08:23.874][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master], files count:[71]
+[15:08:24.015][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/Downloads/neovimrc-master] finished, takes [0.142] sec.
+[15:08:57.833][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 13.684 MB
+        # 00 : 13.371 MB
+        # 01 : 0.104 MB
+        # 02 : 0.053 MB
+        # 03 : 0.102 MB
+        # 04 : 0.053 MB
+    --------------- Coroutine ---------------
+        Total:     37
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      37
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[15:13:20.938][warn] [#0:script/pub/report.lua:24]: Load proto error:	Disconnected!

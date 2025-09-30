@@ -1,0 +1,1624 @@
+[14:29:26.310][info] [#0:/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/main.lua:68]: Lua Lsp startup, root: 	/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server
+[14:29:26.312][info] [#0:/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/main.lua:69]: ROOT:	/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server
+[14:29:26.312][info] [#0:/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/main.lua:70]: LOGPATH:	/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/log
+[14:29:26.312][info] [#0:/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/main.lua:71]: METAPATH:	/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta
+[14:29:26.313][info] [#0:/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/main.lua:72]: VERSION:	3.15.0
+[14:29:26.361][info] [#0:script/proto/proto.lua:260]: Listen Mode: stdio
+[14:29:26.361][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 2.265 MB
+        # 00 : 2.265 MB
+        # 01 : 0.000 MB
+        # 02 : 0.000 MB
+        # 03 : 0.000 MB
+        # 04 : 0.000 MB
+    --------------- Coroutine ---------------
+        Total:     0
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      0
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[14:29:26.468][info] [#0:script/client.lua:657]: Client init	{
+  capabilities = {
+    general = {
+      markdown = {
+        allowedTags = { "ul", "li", "p", "code", "blockquote", "ol", "h1", "h2", "h3", "h4", "h5", "h6", "hr", "em", "pre", "table", "thead", "tbody", "tr", "th", "td", "div", "del", "a", "strong", "br", "img", "span" },
+        parser = "marked",
+        version = "1.1.0"
+      },
+      positionEncodings = { "utf-16" },
+      regularExpressions = {
+        engine = "ECMAScript",
+        version = "ES2020"
+      },
+      staleRequestSupport = {
+        cancel = true,
+        retryOnContentModified = { "textDocument/semanticTokens/full", "textDocument/semanticTokens/range", "textDocument/semanticTokens/full/delta" }
+      }
+    },
+    notebookDocument = {
+      synchronization = {
+        dynamicRegistration = true,
+        executionSummarySupport = true
+      }
+    },
+    textDocument = {
+      callHierarchy = {
+        dynamicRegistration = true
+      },
+      codeAction = {
+        codeActionLiteralSupport = {
+          codeActionKind = {
+            valueSet = { "", "quickfix", "refactor", "refactor.extract", "refactor.inline", "refactor.rewrite", "source", "source.organizeImports" }
+          }
+        },
+        dataSupport = true,
+        disabledSupport = true,
+        dynamicRegistration = true,
+        honorsChangeAnnotations = true,
+        isPreferredSupport = true,
+        resolveSupport = {
+          properties = { "edit" }
+        }
+      },
+      codeLens = {
+        dynamicRegistration = true
+      },
+      colorProvider = {
+        dynamicRegistration = true
+      },
+      completion = {
+        completionItem = {
+          commitCharactersSupport = true,
+          deprecatedSupport = true,
+          documentationFormat = { "markdown", "plaintext" },
+          insertReplaceSupport = true,
+          insertTextModeSupport = {
+            valueSet = { 1, 2 }
+          },
+          labelDetailsSupport = true,
+          preselectSupport = true,
+          resolveSupport = {
+            properties = { "documentation", "detail", "additionalTextEdits" }
+          },
+          snippetSupport = true,
+          tagSupport = {
+            valueSet = { 1 }
+          }
+        },
+        completionItemKind = {
+          valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 }
+        },
+        completionList = {
+          itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+        },
+        contextSupport = true,
+        dynamicRegistration = true,
+        insertTextMode = 2
+      },
+      declaration = {
+        dynamicRegistration = true,
+        linkSupport = true
+      },
+      definition = {
+        dynamicRegistration = true,
+        linkSupport = true
+      },
+      diagnostic = {
+        dynamicRegistration = true,
+        relatedDocumentSupport = false
+      },
+      documentHighlight = {
+        dynamicRegistration = true
+      },
+      documentLink = {
+        dynamicRegistration = true,
+        tooltipSupport = true
+      },
+      documentSymbol = {
+        dynamicRegistration = true,
+        hierarchicalDocumentSymbolSupport = true,
+        labelSupport = true,
+        symbolKind = {
+          valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 }
+        },
+        tagSupport = {
+          valueSet = { 1 }
+        }
+      },
+      foldingRange = {
+        dynamicRegistration = true,
+        foldingRange = {
+          collapsedText = false
+        },
+        foldingRangeKind = {
+          valueSet = { "comment", "imports", "region" }
+        },
+        lineFoldingOnly = true,
+        rangeLimit = 5000
+      },
+      formatting = {
+        dynamicRegistration = true
+      },
+      hover = {
+        contentFormat = { "markdown", "plaintext" },
+        dynamicRegistration = true
+      },
+      implementation = {
+        dynamicRegistration = true,
+        linkSupport = true
+      },
+      inlayHint = {
+        dynamicRegistration = true,
+        resolveSupport = {
+          properties = { "tooltip", "textEdits", "label.tooltip", "label.location", "label.command" }
+        }
+      },
+      inlineValue = {
+        dynamicRegistration = true
+      },
+      linkedEditingRange = {
+        dynamicRegistration = true
+      },
+      onTypeFormatting = {
+        dynamicRegistration = true
+      },
+      publishDiagnostics = {
+        codeDescriptionSupport = true,
+        dataSupport = true,
+        relatedInformation = true,
+        tagSupport = {
+          valueSet = { 1, 2 }
+        },
+        versionSupport = false
+      },
+      rangeFormatting = {
+        dynamicRegistration = true,
+        rangesSupport = true
+      },
+      references = {
+        dynamicRegistration = true
+      },
+      rename = {
+        dynamicRegistration = true,
+        honorsChangeAnnotations = true,
+        prepareSupport = true,
+        prepareSupportDefaultBehavior = 1
+      },
+      selectionRange = {
+        dynamicRegistration = true
+      },
+      semanticTokens = {
+        augmentsSyntaxTokens = true,
+        dynamicRegistration = true,
+        formats = { "relative" },
+        multilineTokenSupport = false,
+        overlappingTokenSupport = false,
+        requests = {
+          full = {
+            delta = true
+          },
+          range = true
+        },
+        serverCancelSupport = true,
+        tokenModifiers = { "declaration", "definition", "readonly", "static", "deprecated", "abstract", "async", "modification", "documentation", "defaultLibrary" },
+        tokenTypes = { "namespace", "type", "class", "enum", "interface", "struct", "typeParameter", "parameter", "variable", "property", "enumMember", "event", "function", "method", "macro", "keyword", "modifier", "comment", "string", "number", "regexp", "operator", "decorator" }
+      },
+      signatureHelp = {
+        contextSupport = true,
+        dynamicRegistration = true,
+        signatureInformation = {
+          activeParameterSupport = true,
+          documentationFormat = { "markdown", "plaintext" },
+          parameterInformation = {
+            labelOffsetSupport = true
+          }
+        }
+      },
+      synchronization = {
+        didSave = true,
+        dynamicRegistration = true,
+        willSave = true,
+        willSaveWaitUntil = true
+      },
+      typeDefinition = {
+        dynamicRegistration = true,
+        linkSupport = true
+      },
+      typeHierarchy = {
+        dynamicRegistration = true
+      }
+    },
+    window = {
+      showDocument = {
+        support = true
+      },
+      showMessage = {
+        messageActionItem = {
+          additionalPropertiesSupport = true
+        }
+      },
+      workDoneProgress = true
+    },
+    workspace = {
+      applyEdit = true,
+      codeLens = {
+        refreshSupport = true
+      },
+      configuration = true,
+      diagnostics = {
+        refreshSupport = true
+      },
+      didChangeConfiguration = {
+        dynamicRegistration = true
+      },
+      didChangeWatchedFiles = {
+        dynamicRegistration = true,
+        relativePatternSupport = true
+      },
+      executeCommand = {
+        dynamicRegistration = true
+      },
+      fileOperations = {
+        didCreate = true,
+        didDelete = true,
+        didRename = true,
+        dynamicRegistration = true,
+        willCreate = true,
+        willDelete = true,
+        willRename = true
+      },
+      foldingRange = {
+        refreshSupport = true
+      },
+      inlayHint = {
+        refreshSupport = true
+      },
+      inlineValue = {
+        refreshSupport = true
+      },
+      semanticTokens = {
+        refreshSupport = true
+      },
+      symbol = {
+        dynamicRegistration = true,
+        resolveSupport = {
+          properties = { "location.range" }
+        },
+        symbolKind = {
+          valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 }
+        },
+        tagSupport = {
+          valueSet = { 1 }
+        }
+      },
+      workspaceEdit = {
+        changeAnnotationSupport = {
+          groupsOnLabel = true
+        },
+        documentChanges = true,
+        failureHandling = "textOnlyTransactional",
+        normalizesLineEndings = true,
+        resourceOperations = { "create", "rename", "delete" }
+      },
+      workspaceFolders = true
+    }
+  },
+  clientInfo = {
+    name = "Cursor",
+    version = "1.99.3"
+  },
+  initializationOptions = {
+    changeConfiguration = true,
+    codeLensViewReferences = true,
+    fixIndents = true,
+    languageConfiguration = true,
+    statusBar = true,
+    storagePath = "/Users/remus/Library/Application Support/Cursor/User/globalStorage/sumneko.lua",
+    trustByClient = true,
+    useSemanticByRange = true,
+    viewDocument = true
+  },
+  locale = "en",
+  processId = 90198,
+  rootPath = "/Users/remus/.config/nvim",
+  rootUri = "file:///Users/remus/.config/nvim",
+  trace = "off",
+  workDoneToken = "ceb1e424-86c7-41cf-8796-728556d89a68",
+  workspaceFolders = { {
+      name = "nvim",
+      uri = "file:///Users/remus/.config/nvim"
+    } }
+}
+[14:29:26.468][info] [#0:script/language.lua:137]: VSC language: en
+[14:29:26.468][info] [#0:script/language.lua:138]: LS  language: en-us
+[14:29:26.468][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///Users/remus/.config/nvim
+[14:29:26.468][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/log/file_Users_remus_.config_nvim.log
+[14:29:26.469][info] [#0:script/workspace/workspace.lua:48]: Workspace create: 	file:///Users/remus/.config/nvim
+[14:29:27.084][info] [#0:script/provider/provider.lua:49]: Load config from client	file:///Users/remus/.config/nvim
+[14:29:27.084][info] [#0:script/provider/provider.lua:50]: {
+  Lua = {
+    addonManager = {
+      enable = true,
+      repositoryBranch = "",
+      repositoryPath = ""
+    },
+    addonRepositoryPath = "",
+    codeLens = {
+      enable = false
+    },
+    completion = {
+      autoRequire = true,
+      callSnippet = "Disable",
+      displayContext = 0,
+      enable = true,
+      keywordSnippet = "Replace",
+      postfix = "@",
+      requireSeparator = ".",
+      showParams = true,
+      showWord = "Fallback",
+      workspaceWord = true
+    },
+    diagnostics = {
+      disable = {},
+      disableScheme = { "git" },
+      enable = true,
+      globals = {},
+      globalsRegex = {},
+      groupFileStatus = {},
+      groupSeverity = {},
+      ignoredFiles = "Opened",
+      libraryFiles = "Opened",
+      neededFileStatus = {},
+      severity = {},
+      unusedLocalExclude = {},
+      workspaceDelay = 3000,
+      workspaceEvent = "OnSave",
+      workspaceRate = 100
+    },
+    doc = {
+      packageName = {},
+      privateName = {},
+      protectedName = {},
+      regengine = "glob"
+    },
+    docScriptPath = "",
+    format = {
+      defaultConfig = {},
+      enable = true
+    },
+    hint = {
+      arrayIndex = "Auto",
+      await = true,
+      awaitPropagate = false,
+      enable = false,
+      paramName = "All",
+      paramType = true,
+      semicolon = "SameLine",
+      setType = false
+    },
+    hover = {
+      enable = true,
+      enumsLimit = 5,
+      expandAlias = true,
+      previewFields = 10,
+      viewNumber = true,
+      viewString = true,
+      viewStringMax = 1000
+    },
+    language = {
+      completeAnnotation = true,
+      fixIndent = true
+    },
+    misc = {
+      executablePath = "",
+      parameters = {}
+    },
+    nameStyle = {
+      config = {}
+    },
+    runtime = {
+      builtin = {},
+      fileEncoding = "utf8",
+      meta = "${version} ${language} ${encoding}",
+      nonstandardSymbol = {},
+      path = { "?.lua", "?/init.lua" },
+      pathStrict = false,
+      plugin = "",
+      pluginArgs = {},
+      special = {},
+      unicodeName = false,
+      version = "Lua 5.4"
+    },
+    semantic = {
+      annotation = true,
+      enable = true,
+      keyword = false,
+      variable = true
+    },
+    signatureHelp = {
+      enable = true
+    },
+    spell = {
+      dict = {}
+    },
+    type = {
+      castNumberToInteger = true,
+      checkTableShape = false,
+      inferParamType = false,
+      inferTableSize = 10,
+      maxUnionVariants = 0,
+      weakNilCheck = false,
+      weakUnionCheck = false
+    },
+    typeFormat = {
+      config = {}
+    },
+    window = {
+      progressBar = true,
+      statusBar = true
+    },
+    workspace = {
+      checkThirdParty = "",
+      ignoreDir = { ".vscode" },
+      ignoreSubmodules = true,
+      library = {},
+      maxPreload = 5000,
+      preloadFileSize = 500,
+      useGitIgnore = true,
+      userThirdParty = {}
+    }
+  },
+  ["editor.acceptSuggestionOnEnter"] = "on",
+  ["editor.semanticHighlighting.enabled"] = "configuredByTheme",
+  ["files.associations"] = {},
+  ["files.exclude"] = {
+    ["**/.DS_Store"] = true,
+    ["**/.git"] = true,
+    ["**/.hg"] = true,
+    ["**/.svn"] = true,
+    ["**/Thumbs.db"] = true
+  }
+}
+[14:29:27.187][info] [#0:script/provider/completion.lua:43]: Enable completion.
+[14:29:27.188][info] [#0:script/provider/provider.lua:65]: Load config from client	fallback
+[14:29:27.188][info] [#0:script/provider/provider.lua:66]: {
+  Lua = {
+    addonManager = {
+      enable = true,
+      repositoryBranch = "",
+      repositoryPath = ""
+    },
+    addonRepositoryPath = "",
+    codeLens = {
+      enable = false
+    },
+    completion = {
+      autoRequire = true,
+      callSnippet = "Disable",
+      displayContext = 0,
+      enable = true,
+      keywordSnippet = "Replace",
+      postfix = "@",
+      requireSeparator = ".",
+      showParams = true,
+      showWord = "Fallback",
+      workspaceWord = true
+    },
+    diagnostics = {
+      disable = {},
+      disableScheme = { "git" },
+      enable = true,
+      globals = {},
+      globalsRegex = {},
+      groupFileStatus = {},
+      groupSeverity = {},
+      ignoredFiles = "Opened",
+      libraryFiles = "Opened",
+      neededFileStatus = {},
+      severity = {},
+      unusedLocalExclude = {},
+      workspaceDelay = 3000,
+      workspaceEvent = "OnSave",
+      workspaceRate = 100
+    },
+    doc = {
+      packageName = {},
+      privateName = {},
+      protectedName = {},
+      regengine = "glob"
+    },
+    docScriptPath = "",
+    format = {
+      defaultConfig = {},
+      enable = true
+    },
+    hint = {
+      arrayIndex = "Auto",
+      await = true,
+      awaitPropagate = false,
+      enable = false,
+      paramName = "All",
+      paramType = true,
+      semicolon = "SameLine",
+      setType = false
+    },
+    hover = {
+      enable = true,
+      enumsLimit = 5,
+      expandAlias = true,
+      previewFields = 10,
+      viewNumber = true,
+      viewString = true,
+      viewStringMax = 1000
+    },
+    language = {
+      completeAnnotation = true,
+      fixIndent = true
+    },
+    misc = {
+      executablePath = "",
+      parameters = {}
+    },
+    nameStyle = {
+      config = {}
+    },
+    runtime = {
+      builtin = {},
+      fileEncoding = "utf8",
+      meta = "${version} ${language} ${encoding}",
+      nonstandardSymbol = {},
+      path = { "?.lua", "?/init.lua" },
+      pathStrict = false,
+      plugin = "",
+      pluginArgs = {},
+      special = {},
+      unicodeName = false,
+      version = "Lua 5.4"
+    },
+    semantic = {
+      annotation = true,
+      enable = true,
+      keyword = false,
+      variable = true
+    },
+    signatureHelp = {
+      enable = true
+    },
+    spell = {
+      dict = {}
+    },
+    type = {
+      castNumberToInteger = true,
+      checkTableShape = false,
+      inferParamType = false,
+      inferTableSize = 10,
+      maxUnionVariants = 0,
+      weakNilCheck = false,
+      weakUnionCheck = false
+    },
+    typeFormat = {
+      config = {}
+    },
+    window = {
+      progressBar = true,
+      statusBar = true
+    },
+    workspace = {
+      checkThirdParty = "",
+      ignoreDir = { ".vscode" },
+      ignoreSubmodules = true,
+      library = {},
+      maxPreload = 5000,
+      preloadFileSize = 500,
+      useGitIgnore = true,
+      userThirdParty = {}
+    }
+  },
+  ["editor.acceptSuggestionOnEnter"] = "on",
+  ["editor.semanticHighlighting.enabled"] = "configuredByTheme",
+  ["files.associations"] = {},
+  ["files.exclude"] = {
+    ["**/.DS_Store"] = true,
+    ["**/.git"] = true,
+    ["**/.hg"] = true,
+    ["**/.svn"] = true,
+    ["**/Thumbs.db"] = true
+  }
+}
+[14:29:27.406][info] [#0:script/plugin.lua:125]: plugin path:	/Users/remus/.config/nvim
+[14:29:27.406][warn] [#0:script/plugin.lua:140]: plugin not found:	/Users/remus/.config/nvim
+[14:29:27.406][info] [#0:script/library.lua:212]: Init builtin library at:	file:///Users/remus/.config/nvim
+[14:29:27.416][info] [#0:script/library.lua:212]: Init builtin library at:	nil
+[14:29:27.526][info] [#0:script/workspace/workspace.lua:330]: Preload start:	file:///Users/remus/.config/nvim
+[14:29:27.528][info] [#0:script/workspace/workspace.lua:336]: Scan files at:	file:///Users/remus/.config/nvim
+[14:29:27.529][info] [#0:script/workspace/workspace.lua:330]: Preload start:	<fallback>
+[14:29:27.530][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/table.lua
+[14:29:27.530][info] [#0:script/provider/provider.lua:49]: Load config from client	file:///Users/remus/.config/nvim
+[14:29:27.530][info] [#0:script/provider/provider.lua:50]: {
+  Lua = {
+    addonManager = {
+      enable = true,
+      repositoryBranch = "",
+      repositoryPath = ""
+    },
+    addonRepositoryPath = "",
+    codeLens = {
+      enable = false
+    },
+    completion = {
+      autoRequire = true,
+      callSnippet = "Disable",
+      displayContext = 0,
+      enable = true,
+      keywordSnippet = "Replace",
+      postfix = "@",
+      requireSeparator = ".",
+      showParams = true,
+      showWord = "Fallback",
+      workspaceWord = true
+    },
+    diagnostics = {
+      disable = {},
+      disableScheme = { "git" },
+      enable = true,
+      globals = {},
+      globalsRegex = {},
+      groupFileStatus = {},
+      groupSeverity = {},
+      ignoredFiles = "Opened",
+      libraryFiles = "Opened",
+      neededFileStatus = {},
+      severity = {},
+      unusedLocalExclude = {},
+      workspaceDelay = 3000,
+      workspaceEvent = "OnSave",
+      workspaceRate = 100
+    },
+    doc = {
+      packageName = {},
+      privateName = {},
+      protectedName = {},
+      regengine = "glob"
+    },
+    docScriptPath = "",
+    format = {
+      defaultConfig = {},
+      enable = true
+    },
+    hint = {
+      arrayIndex = "Auto",
+      await = true,
+      awaitPropagate = false,
+      enable = false,
+      paramName = "All",
+      paramType = true,
+      semicolon = "SameLine",
+      setType = false
+    },
+    hover = {
+      enable = true,
+      enumsLimit = 5,
+      expandAlias = true,
+      previewFields = 10,
+      viewNumber = true,
+      viewString = true,
+      viewStringMax = 1000
+    },
+    language = {
+      completeAnnotation = true,
+      fixIndent = true
+    },
+    misc = {
+      executablePath = "",
+      parameters = {}
+    },
+    nameStyle = {
+      config = {}
+    },
+    runtime = {
+      builtin = {},
+      fileEncoding = "utf8",
+      meta = "${version} ${language} ${encoding}",
+      nonstandardSymbol = {},
+      path = { "?.lua", "?/init.lua" },
+      pathStrict = false,
+      plugin = "",
+      pluginArgs = {},
+      special = {},
+      unicodeName = false,
+      version = "Lua 5.4"
+    },
+    semantic = {
+      annotation = true,
+      enable = true,
+      keyword = false,
+      variable = true
+    },
+    signatureHelp = {
+      enable = true
+    },
+    spell = {
+      dict = {}
+    },
+    type = {
+      castNumberToInteger = true,
+      checkTableShape = false,
+      inferParamType = false,
+      inferTableSize = 10,
+      maxUnionVariants = 0,
+      weakNilCheck = false,
+      weakUnionCheck = false
+    },
+    typeFormat = {
+      config = {}
+    },
+    window = {
+      progressBar = true,
+      statusBar = true
+    },
+    workspace = {
+      checkThirdParty = "",
+      ignoreDir = { ".vscode" },
+      ignoreSubmodules = true,
+      library = {},
+      maxPreload = 5000,
+      preloadFileSize = 500,
+      useGitIgnore = true,
+      userThirdParty = {}
+    }
+  },
+  ["editor.acceptSuggestionOnEnter"] = "on",
+  ["editor.semanticHighlighting.enabled"] = "configuredByTheme",
+  ["files.associations"] = {},
+  ["files.exclude"] = {
+    ["**/.DS_Store"] = true,
+    ["**/.git"] = true,
+    ["**/.hg"] = true,
+    ["**/.svn"] = true,
+    ["**/Thumbs.db"] = true
+  }
+}
+[14:29:27.531][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[14:29:27.531][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/package.lua
+[14:29:27.531][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[14:29:27.531][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[14:29:27.531][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/math.lua
+[14:29:27.531][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/io.lua
+[14:29:27.531][info] [#0:script/provider/provider.lua:65]: Load config from client	fallback
+[14:29:27.531][info] [#0:script/provider/provider.lua:66]: {
+  Lua = {
+    addonManager = {
+      enable = true,
+      repositoryBranch = "",
+      repositoryPath = ""
+    },
+    addonRepositoryPath = "",
+    codeLens = {
+      enable = false
+    },
+    completion = {
+      autoRequire = true,
+      callSnippet = "Disable",
+      displayContext = 0,
+      enable = true,
+      keywordSnippet = "Replace",
+      postfix = "@",
+      requireSeparator = ".",
+      showParams = true,
+      showWord = "Fallback",
+      workspaceWord = true
+    },
+    diagnostics = {
+      disable = {},
+      disableScheme = { "git" },
+      enable = true,
+      globals = {},
+      globalsRegex = {},
+      groupFileStatus = {},
+      groupSeverity = {},
+      ignoredFiles = "Opened",
+      libraryFiles = "Opened",
+      neededFileStatus = {},
+      severity = {},
+      unusedLocalExclude = {},
+      workspaceDelay = 3000,
+      workspaceEvent = "OnSave",
+      workspaceRate = 100
+    },
+    doc = {
+      packageName = {},
+      privateName = {},
+      protectedName = {},
+      regengine = "glob"
+    },
+    docScriptPath = "",
+    format = {
+      defaultConfig = {},
+      enable = true
+    },
+    hint = {
+      arrayIndex = "Auto",
+      await = true,
+      awaitPropagate = false,
+      enable = false,
+      paramName = "All",
+      paramType = true,
+      semicolon = "SameLine",
+      setType = false
+    },
+    hover = {
+      enable = true,
+      enumsLimit = 5,
+      expandAlias = true,
+      previewFields = 10,
+      viewNumber = true,
+      viewString = true,
+      viewStringMax = 1000
+    },
+    language = {
+      completeAnnotation = true,
+      fixIndent = true
+    },
+    misc = {
+      executablePath = "",
+      parameters = {}
+    },
+    nameStyle = {
+      config = {}
+    },
+    runtime = {
+      builtin = {},
+      fileEncoding = "utf8",
+      meta = "${version} ${language} ${encoding}",
+      nonstandardSymbol = {},
+      path = { "?.lua", "?/init.lua" },
+      pathStrict = false,
+      plugin = "",
+      pluginArgs = {},
+      special = {},
+      unicodeName = false,
+      version = "Lua 5.4"
+    },
+    semantic = {
+      annotation = true,
+      enable = true,
+      keyword = false,
+      variable = true
+    },
+    signatureHelp = {
+      enable = true
+    },
+    spell = {
+      dict = {}
+    },
+    type = {
+      castNumberToInteger = true,
+      checkTableShape = false,
+      inferParamType = false,
+      inferTableSize = 10,
+      maxUnionVariants = 0,
+      weakNilCheck = false,
+      weakUnionCheck = false
+    },
+    typeFormat = {
+      config = {}
+    },
+    window = {
+      progressBar = true,
+      statusBar = true
+    },
+    workspace = {
+      checkThirdParty = "",
+      ignoreDir = { ".vscode" },
+      ignoreSubmodules = true,
+      library = {},
+      maxPreload = 5000,
+      preloadFileSize = 500,
+      useGitIgnore = true,
+      userThirdParty = {}
+    }
+  },
+  ["editor.acceptSuggestionOnEnter"] = "on",
+  ["editor.semanticHighlighting.enabled"] = "configuredByTheme",
+  ["files.associations"] = {},
+  ["files.exclude"] = {
+    ["**/.DS_Store"] = true,
+    ["**/.git"] = true,
+    ["**/.hg"] = true,
+    ["**/.svn"] = true,
+    ["**/Thumbs.db"] = true
+  }
+}
+[14:29:27.532][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[14:29:27.532][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/string.lua
+[14:29:27.532][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[14:29:27.532][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/os.lua
+[14:29:27.533][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/table.lua
+[14:29:27.533][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[14:29:27.533][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/package.lua
+[14:29:27.533][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[14:29:27.533][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[14:29:27.533][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/math.lua
+[14:29:27.533][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/io.lua
+[14:29:27.533][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[14:29:27.533][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/string.lua
+[14:29:27.533][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[14:29:27.533][info] [#0:script/workspace/workspace.lua:359]: Scan library at:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/os.lua
+[14:29:27.637][info] [#0:script/workspace/workspace.lua:385]: Found 11 files at:	<fallback>
+[14:29:27.637][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	<fallback>
+[14:29:27.637][info] [#0:script/workspace/workspace.lua:385]: Found 52 files at:	file:///Users/remus/.config/nvim
+[14:29:27.637][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///Users/remus/.config/nvim
+[14:29:27.637][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///Users/remus/.config/nvim/lua/plugins/nvim-notify.lua
+[14:29:27.737][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/os.lua , size = 5.875 KB
+[14:29:27.740][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/os.lua
+[14:29:27.740][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/os.lua
+[14:29:27.740][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/debug.lua , size = 7.812 KB
+[14:29:27.742][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[14:29:27.742][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[14:29:27.742][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/string.lua , size = 5.401 KB
+[14:29:27.744][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/string.lua
+[14:29:27.744][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/string.lua
+[14:29:27.744][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/basic.lua , size = 16.192 KB
+[14:29:27.748][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[14:29:27.748][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[14:29:27.748][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/io.lua , size = 6.566 KB
+[14:29:27.750][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/io.lua
+[14:29:27.750][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/io.lua
+[14:29:27.750][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/math.lua , size = 8.858 KB
+[14:29:27.752][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/math.lua
+[14:29:27.752][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/math.lua
+[14:29:27.752][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/builtin.lua , size = 0.302 KB
+[14:29:27.752][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[14:29:27.752][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[14:29:27.752][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua , size = 2.669 KB
+[14:29:27.753][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[14:29:27.753][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[14:29:27.753][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/package.lua , size = 3.050 KB
+[14:29:27.755][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/package.lua
+[14:29:27.755][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/package.lua
+[14:29:27.755][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/utf8.lua , size = 2.447 KB
+[14:29:27.755][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[14:29:27.755][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[14:29:27.755][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/table.lua , size = 4.551 KB
+[14:29:27.757][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/table.lua
+[14:29:27.757][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///Users/remus/.cursor/extensions/sumneko.lua-3.15.0-darwin-arm64/server/meta/Lua%205.4%20en-us%20utf8/table.lua
+[14:29:27.757][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/init.lua , size = 0.222 KB
+[14:29:27.757][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lsp/lua-language-server.lua , size = 0.250 KB
+[14:29:27.757][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lsp/svelte-language-server.lua , size = 0.157 KB
+[14:29:27.757][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lsp/yaml-language-server.lua , size = 1.384 KB
+[14:29:27.757][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lsp/kotlin-language-server.lua , size = 0.177 KB
+[14:29:27.757][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lsp/dockerfile-language-server.lua , size = 0.141 KB
+[14:29:27.758][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lsp/terraform-ls.lua , size = 0.142 KB
+[14:29:27.758][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lsp/typescript-language-server.lua , size = 0.219 KB
+[14:29:27.758][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lsp/helm-ls.lua , size = 0.146 KB
+[14:29:27.758][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lsp/buf.lua , size = 0.486 KB
+[14:29:27.758][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lsp/rust-analyzer.lua , size = 0.260 KB
+[14:29:27.758][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lsp/json-lsp.lua , size = 0.139 KB
+[14:29:27.758][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lsp/gopls.lua , size = 2.074 KB
+[14:29:27.759][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lsp/python-lsp-server.lua , size = 0.802 KB
+[14:29:27.759][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/core/lsp.lua , size = 1.555 KB
+[14:29:27.759][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/core/lazy.lua , size = 0.800 KB
+[14:29:27.760][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/config/autocmds.lua , size = 0.721 KB
+[14:29:27.760][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/config/keymaps.lua , size = 1.690 KB
+[14:29:27.760][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/config/options.lua , size = 1.280 KB
+[14:29:27.761][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/aerial.lua , size = 1.575 KB
+[14:29:27.761][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/autotag.lua , size = 0.410 KB
+[14:29:27.761][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/formatting.lua , size = 0.820 KB
+[14:29:27.762][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/autopairs.lua , size = 0.075 KB
+[14:29:27.762][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/telescope.lua , size = 1.727 KB
+[14:29:27.762][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/trouble.lua , size = 0.263 KB
+[14:29:27.763][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/theme.lua , size = 5.405 KB
+[14:29:27.764][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/colorizer.lua , size = 0.099 KB
+[14:29:27.764][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/lualine.lua , size = 2.350 KB
+[14:29:27.767][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/blink.lua , size = 1.760 KB
+[14:29:27.767][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/illuminate.lua , size = 1.188 KB
+[14:29:27.768][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/gitsigns.lua , size = 3.210 KB
+[14:29:27.769][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/which-key.lua , size = 1.013 KB
+[14:29:27.769][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/plenary.lua , size = 0.061 KB
+[14:29:27.769][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/treesitter.lua , size = 4.212 KB
+[14:29:27.770][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/dap.lua , size = 2.955 KB
+[14:29:27.770][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/indent-blankline.lua , size = 0.252 KB
+[14:29:27.770][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/neotest.lua , size = 2.854 KB
+[14:29:27.771][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/toggleterm.lua , size = 1.560 KB
+[14:29:27.771][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/undotree.lua , size = 0.111 KB
+[14:29:27.771][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///Users/remus/.config/nvim/lua/plugins/mason.lua , size = 1.165 KB
+[14:29:27.877][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.038] sec: <fallback>
+[14:29:27.877][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: <fallback>
+[14:29:27.877][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	<fallback>
+[14:29:27.877][info] [#0:script/workspace/workspace.lua:387]: Preload finish at:	<fallback>
+[14:29:27.879][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.040] sec: file:///Users/remus/.config/nvim
+[14:29:27.879][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///Users/remus/.config/nvim
+[14:29:27.879][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///Users/remus/.config/nvim
+[14:29:27.879][info] [#0:script/workspace/workspace.lua:387]: Preload finish at:	file:///Users/remus/.config/nvim
+[14:29:27.884][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///Users/remus/.config/nvim], files count:[52]
+[14:29:27.951][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///Users/remus/.config/nvim] finished, takes [0.062] sec.
+[14:29:28.270][info] [#0:script/provider/provider.lua:49]: Load config from client	file:///Users/remus/.config/nvim
+[14:29:28.270][info] [#0:script/provider/provider.lua:50]: {
+  Lua = {
+    addonManager = {
+      enable = true,
+      repositoryBranch = "",
+      repositoryPath = ""
+    },
+    addonRepositoryPath = "",
+    codeLens = {
+      enable = false
+    },
+    completion = {
+      autoRequire = true,
+      callSnippet = "Disable",
+      displayContext = 0,
+      enable = true,
+      keywordSnippet = "Replace",
+      postfix = "@",
+      requireSeparator = ".",
+      showParams = true,
+      showWord = "Fallback",
+      workspaceWord = true
+    },
+    diagnostics = {
+      disable = {},
+      disableScheme = { "git" },
+      enable = true,
+      globals = {},
+      globalsRegex = {},
+      groupFileStatus = {},
+      groupSeverity = {},
+      ignoredFiles = "Opened",
+      libraryFiles = "Opened",
+      neededFileStatus = {},
+      severity = {},
+      unusedLocalExclude = {},
+      workspaceDelay = 3000,
+      workspaceEvent = "OnSave",
+      workspaceRate = 100
+    },
+    doc = {
+      packageName = {},
+      privateName = {},
+      protectedName = {},
+      regengine = "glob"
+    },
+    docScriptPath = "",
+    format = {
+      defaultConfig = {},
+      enable = true
+    },
+    hint = {
+      arrayIndex = "Auto",
+      await = true,
+      awaitPropagate = false,
+      enable = false,
+      paramName = "All",
+      paramType = true,
+      semicolon = "SameLine",
+      setType = false
+    },
+    hover = {
+      enable = true,
+      enumsLimit = 5,
+      expandAlias = true,
+      previewFields = 10,
+      viewNumber = true,
+      viewString = true,
+      viewStringMax = 1000
+    },
+    language = {
+      completeAnnotation = true,
+      fixIndent = true
+    },
+    misc = {
+      executablePath = "",
+      parameters = {}
+    },
+    nameStyle = {
+      config = {}
+    },
+    runtime = {
+      builtin = {},
+      fileEncoding = "utf8",
+      meta = "${version} ${language} ${encoding}",
+      nonstandardSymbol = {},
+      path = { "?.lua", "?/init.lua" },
+      pathStrict = false,
+      plugin = "",
+      pluginArgs = {},
+      special = {},
+      unicodeName = false,
+      version = "Lua 5.4"
+    },
+    semantic = {
+      annotation = true,
+      enable = true,
+      keyword = false,
+      variable = true
+    },
+    signatureHelp = {
+      enable = true
+    },
+    spell = {
+      dict = {}
+    },
+    type = {
+      castNumberToInteger = true,
+      checkTableShape = false,
+      inferParamType = false,
+      inferTableSize = 10,
+      maxUnionVariants = 0,
+      weakNilCheck = false,
+      weakUnionCheck = false
+    },
+    typeFormat = {
+      config = {}
+    },
+    window = {
+      progressBar = true,
+      statusBar = true
+    },
+    workspace = {
+      checkThirdParty = "",
+      ignoreDir = { ".vscode" },
+      ignoreSubmodules = true,
+      library = {},
+      maxPreload = 5000,
+      preloadFileSize = 500,
+      useGitIgnore = true,
+      userThirdParty = {}
+    }
+  },
+  ["editor.acceptSuggestionOnEnter"] = "on",
+  ["editor.semanticHighlighting.enabled"] = "configuredByTheme",
+  ["files.associations"] = {},
+  ["files.exclude"] = {
+    ["**/.DS_Store"] = true,
+    ["**/.git"] = true,
+    ["**/.hg"] = true,
+    ["**/.svn"] = true,
+    ["**/Thumbs.db"] = true
+  }
+}
+[14:29:28.379][info] [#0:script/provider/provider.lua:65]: Load config from client	fallback
+[14:29:28.379][info] [#0:script/provider/provider.lua:66]: {
+  Lua = {
+    addonManager = {
+      enable = true,
+      repositoryBranch = "",
+      repositoryPath = ""
+    },
+    addonRepositoryPath = "",
+    codeLens = {
+      enable = false
+    },
+    completion = {
+      autoRequire = true,
+      callSnippet = "Disable",
+      displayContext = 0,
+      enable = true,
+      keywordSnippet = "Replace",
+      postfix = "@",
+      requireSeparator = ".",
+      showParams = true,
+      showWord = "Fallback",
+      workspaceWord = true
+    },
+    diagnostics = {
+      disable = {},
+      disableScheme = { "git" },
+      enable = true,
+      globals = {},
+      globalsRegex = {},
+      groupFileStatus = {},
+      groupSeverity = {},
+      ignoredFiles = "Opened",
+      libraryFiles = "Opened",
+      neededFileStatus = {},
+      severity = {},
+      unusedLocalExclude = {},
+      workspaceDelay = 3000,
+      workspaceEvent = "OnSave",
+      workspaceRate = 100
+    },
+    doc = {
+      packageName = {},
+      privateName = {},
+      protectedName = {},
+      regengine = "glob"
+    },
+    docScriptPath = "",
+    format = {
+      defaultConfig = {},
+      enable = true
+    },
+    hint = {
+      arrayIndex = "Auto",
+      await = true,
+      awaitPropagate = false,
+      enable = false,
+      paramName = "All",
+      paramType = true,
+      semicolon = "SameLine",
+      setType = false
+    },
+    hover = {
+      enable = true,
+      enumsLimit = 5,
+      expandAlias = true,
+      previewFields = 10,
+      viewNumber = true,
+      viewString = true,
+      viewStringMax = 1000
+    },
+    language = {
+      completeAnnotation = true,
+      fixIndent = true
+    },
+    misc = {
+      executablePath = "",
+      parameters = {}
+    },
+    nameStyle = {
+      config = {}
+    },
+    runtime = {
+      builtin = {},
+      fileEncoding = "utf8",
+      meta = "${version} ${language} ${encoding}",
+      nonstandardSymbol = {},
+      path = { "?.lua", "?/init.lua" },
+      pathStrict = false,
+      plugin = "",
+      pluginArgs = {},
+      special = {},
+      unicodeName = false,
+      version = "Lua 5.4"
+    },
+    semantic = {
+      annotation = true,
+      enable = true,
+      keyword = false,
+      variable = true
+    },
+    signatureHelp = {
+      enable = true
+    },
+    spell = {
+      dict = {}
+    },
+    type = {
+      castNumberToInteger = true,
+      checkTableShape = false,
+      inferParamType = false,
+      inferTableSize = 10,
+      maxUnionVariants = 0,
+      weakNilCheck = false,
+      weakUnionCheck = false
+    },
+    typeFormat = {
+      config = {}
+    },
+    window = {
+      progressBar = true,
+      statusBar = true
+    },
+    workspace = {
+      checkThirdParty = "",
+      ignoreDir = { ".vscode" },
+      ignoreSubmodules = true,
+      library = {},
+      maxPreload = 5000,
+      preloadFileSize = 500,
+      useGitIgnore = true,
+      userThirdParty = {}
+    }
+  },
+  ["editor.acceptSuggestionOnEnter"] = "on",
+  ["editor.semanticHighlighting.enabled"] = "configuredByTheme",
+  ["files.associations"] = {},
+  ["files.exclude"] = {
+    ["**/.DS_Store"] = true,
+    ["**/.git"] = true,
+    ["**/.hg"] = true,
+    ["**/.svn"] = true,
+    ["**/Thumbs.db"] = true
+  }
+}
+[14:29:36.047][info] [#0:script/provider/provider.lua:49]: Load config from client	file:///Users/remus/.config/nvim
+[14:29:36.047][info] [#0:script/provider/provider.lua:50]: {
+  Lua = {
+    addonManager = {
+      enable = true,
+      repositoryBranch = "",
+      repositoryPath = ""
+    },
+    addonRepositoryPath = "",
+    codeLens = {
+      enable = false
+    },
+    completion = {
+      autoRequire = true,
+      callSnippet = "Disable",
+      displayContext = 0,
+      enable = true,
+      keywordSnippet = "Replace",
+      postfix = "@",
+      requireSeparator = ".",
+      showParams = true,
+      showWord = "Fallback",
+      workspaceWord = true
+    },
+    diagnostics = {
+      disable = {},
+      disableScheme = { "git" },
+      enable = true,
+      globals = {},
+      globalsRegex = {},
+      groupFileStatus = {},
+      groupSeverity = {},
+      ignoredFiles = "Opened",
+      libraryFiles = "Opened",
+      neededFileStatus = {},
+      severity = {},
+      unusedLocalExclude = {},
+      workspaceDelay = 3000,
+      workspaceEvent = "OnSave",
+      workspaceRate = 100
+    },
+    doc = {
+      packageName = {},
+      privateName = {},
+      protectedName = {},
+      regengine = "glob"
+    },
+    docScriptPath = "",
+    format = {
+      defaultConfig = {},
+      enable = true
+    },
+    hint = {
+      arrayIndex = "Auto",
+      await = true,
+      awaitPropagate = false,
+      enable = false,
+      paramName = "All",
+      paramType = true,
+      semicolon = "SameLine",
+      setType = false
+    },
+    hover = {
+      enable = true,
+      enumsLimit = 5,
+      expandAlias = true,
+      previewFields = 10,
+      viewNumber = true,
+      viewString = true,
+      viewStringMax = 1000
+    },
+    language = {
+      completeAnnotation = true,
+      fixIndent = true
+    },
+    misc = {
+      executablePath = "",
+      parameters = {}
+    },
+    nameStyle = {
+      config = {}
+    },
+    runtime = {
+      builtin = {},
+      fileEncoding = "utf8",
+      meta = "${version} ${language} ${encoding}",
+      nonstandardSymbol = {},
+      path = { "?.lua", "?/init.lua" },
+      pathStrict = false,
+      plugin = "",
+      pluginArgs = {},
+      special = {},
+      unicodeName = false,
+      version = "Lua 5.4"
+    },
+    semantic = {
+      annotation = true,
+      enable = true,
+      keyword = false,
+      variable = true
+    },
+    signatureHelp = {
+      enable = true
+    },
+    spell = {
+      dict = {}
+    },
+    type = {
+      castNumberToInteger = true,
+      checkTableShape = false,
+      inferParamType = false,
+      inferTableSize = 10,
+      maxUnionVariants = 0,
+      weakNilCheck = false,
+      weakUnionCheck = false
+    },
+    typeFormat = {
+      config = {}
+    },
+    window = {
+      progressBar = true,
+      statusBar = true
+    },
+    workspace = {
+      checkThirdParty = "",
+      ignoreDir = { ".vscode" },
+      ignoreSubmodules = true,
+      library = {},
+      maxPreload = 5000,
+      preloadFileSize = 500,
+      useGitIgnore = true,
+      userThirdParty = {}
+    }
+  },
+  ["editor.acceptSuggestionOnEnter"] = "on",
+  ["editor.semanticHighlighting.enabled"] = "configuredByTheme",
+  ["files.associations"] = {},
+  ["files.exclude"] = {
+    ["**/.DS_Store"] = true,
+    ["**/.git"] = true,
+    ["**/.hg"] = true,
+    ["**/.svn"] = true,
+    ["**/Thumbs.db"] = true
+  }
+}
+[14:29:36.151][info] [#0:script/provider/provider.lua:65]: Load config from client	fallback
+[14:29:36.152][info] [#0:script/provider/provider.lua:66]: {
+  Lua = {
+    addonManager = {
+      enable = true,
+      repositoryBranch = "",
+      repositoryPath = ""
+    },
+    addonRepositoryPath = "",
+    codeLens = {
+      enable = false
+    },
+    completion = {
+      autoRequire = true,
+      callSnippet = "Disable",
+      displayContext = 0,
+      enable = true,
+      keywordSnippet = "Replace",
+      postfix = "@",
+      requireSeparator = ".",
+      showParams = true,
+      showWord = "Fallback",
+      workspaceWord = true
+    },
+    diagnostics = {
+      disable = {},
+      disableScheme = { "git" },
+      enable = true,
+      globals = {},
+      globalsRegex = {},
+      groupFileStatus = {},
+      groupSeverity = {},
+      ignoredFiles = "Opened",
+      libraryFiles = "Opened",
+      neededFileStatus = {},
+      severity = {},
+      unusedLocalExclude = {},
+      workspaceDelay = 3000,
+      workspaceEvent = "OnSave",
+      workspaceRate = 100
+    },
+    doc = {
+      packageName = {},
+      privateName = {},
+      protectedName = {},
+      regengine = "glob"
+    },
+    docScriptPath = "",
+    format = {
+      defaultConfig = {},
+      enable = true
+    },
+    hint = {
+      arrayIndex = "Auto",
+      await = true,
+      awaitPropagate = false,
+      enable = false,
+      paramName = "All",
+      paramType = true,
+      semicolon = "SameLine",
+      setType = false
+    },
+    hover = {
+      enable = true,
+      enumsLimit = 5,
+      expandAlias = true,
+      previewFields = 10,
+      viewNumber = true,
+      viewString = true,
+      viewStringMax = 1000
+    },
+    language = {
+      completeAnnotation = true,
+      fixIndent = true
+    },
+    misc = {
+      executablePath = "",
+      parameters = {}
+    },
+    nameStyle = {
+      config = {}
+    },
+    runtime = {
+      builtin = {},
+      fileEncoding = "utf8",
+      meta = "${version} ${language} ${encoding}",
+      nonstandardSymbol = {},
+      path = { "?.lua", "?/init.lua" },
+      pathStrict = false,
+      plugin = "",
+      pluginArgs = {},
+      special = {},
+      unicodeName = false,
+      version = "Lua 5.4"
+    },
+    semantic = {
+      annotation = true,
+      enable = true,
+      keyword = false,
+      variable = true
+    },
+    signatureHelp = {
+      enable = true
+    },
+    spell = {
+      dict = {}
+    },
+    type = {
+      castNumberToInteger = true,
+      checkTableShape = false,
+      inferParamType = false,
+      inferTableSize = 10,
+      maxUnionVariants = 0,
+      weakNilCheck = false,
+      weakUnionCheck = false
+    },
+    typeFormat = {
+      config = {}
+    },
+    window = {
+      progressBar = true,
+      statusBar = true
+    },
+    workspace = {
+      checkThirdParty = "",
+      ignoreDir = { ".vscode" },
+      ignoreSubmodules = true,
+      library = {},
+      maxPreload = 5000,
+      preloadFileSize = 500,
+      useGitIgnore = true,
+      userThirdParty = {}
+    }
+  },
+  ["editor.acceptSuggestionOnEnter"] = "on",
+  ["editor.semanticHighlighting.enabled"] = "configuredByTheme",
+  ["files.associations"] = {},
+  ["files.exclude"] = {
+    ["**/.DS_Store"] = true,
+    ["**/.git"] = true,
+    ["**/.hg"] = true,
+    ["**/.svn"] = true,
+    ["**/Thumbs.db"] = true
+  }
+}
+[14:31:56.475][warn] [#0:script/pub/report.lua:24]: Load proto error:	Disconnected!
