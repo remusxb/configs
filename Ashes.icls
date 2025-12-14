@@ -300,7 +300,7 @@
     </option>
     <option name="DEFAULT_INVALID_STRING_ESCAPE">
       <value>
-        <option name="FOREGROUND" value="95aec7" />
+        <option name="FOREGROUND" value="95c7ae" />
         <option name="EFFECT_COLOR" value="c79595" />
         <option name="EFFECT_TYPE" value="2" />
       </value>
@@ -383,7 +383,7 @@
     </option>
     <option name="DEFAULT_VALID_STRING_ESCAPE">
       <value>
-        <option name="FOREGROUND" value="95aec7" />
+        <option name="FOREGROUND" value="95c7ae" />
       </value>
     </option>
     <option name="DELETED_TEXT_ATTRIBUTES">
