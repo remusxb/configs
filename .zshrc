@@ -80,6 +80,10 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Alt+arrow word navigation (WezTerm sends xterm-style sequences)
+bindkey "^[[1;3D" backward-word
+bindkey "^[[1;3C" forward-word
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -111,6 +115,7 @@ source $ZSH/oh-my-zsh.sh
 
 ######## Aliases ########
 alias python='python3'
+alias pip='pip3'
 alias vim='nvim'
 
 alias dcu="docker compose up"
@@ -120,6 +125,7 @@ alias dcr="docker compose restart"
 alias gcout="git checkout"
 alias gac="git add . && git commit -m"
 alias gplo="git pull origin"
+alias ca="cursor-agent"
 
 ######## oh-my-posh ########
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/custom.omp.json)"
@@ -129,15 +135,3 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 
 ######## cruft ########
 export PATH="$PATH:/Users/remus/Library/Python/3.9/bin"
-
-######## Cursor CLI ########
-export PATH="$HOME/.local/bin:$PATH"
-
-
-# Paths to JDKs
-export JAVA_HOME=$(/usr/libexec/java_home -v 24)
-export PATH=$JAVA_HOME/bin:$PATH
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
