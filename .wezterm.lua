@@ -2,7 +2,13 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- Font
-config.font = wezterm.font("Cousine Nerd Font Propo", { weight = "Bold" })
+config.font = wezterm.font_with_fallback({
+	{ family = "Cousine Nerd Font Propo", weight = "Bold" },
+	{ family = "JetBrains Mono", weight = "Bold" },
+	{ family = "Menlo", weight = "Bold" },
+	{ family = "Consolas", weight = "Bold" },
+	{ family = "monospace", weight = "Bold" },
+})
 config.font_size = 18
 config.line_height = 1.1
 
