@@ -102,6 +102,7 @@ config.visual_bell = {
 
 -- Terminal
 config.term = "xterm-256color"
+config.enable_csi_u_key_encoding = true
 
 -- Keys (Cmd bindings only; Option/Alt is handled natively via send_composed_key settings)
 local act = wezterm.action
