@@ -4,11 +4,11 @@ local config = wezterm.config_builder()
 -- Font
 config.font = wezterm.font("Cousine Nerd Font Propo", { weight = "Bold" })
 config.font_size = 18
+config.line_height = 1.1
 
 -- Window size
 config.initial_cols = 150
 config.initial_rows = 35
-config.line_height = 1.1
 
 -- Appearance
 config.color_scheme = "Ashes (dark) (terminal.sexy)"
@@ -85,11 +85,11 @@ config.window_frame = {
 	border_bottom_color = "#333333",
 	border_top_color = "#333333",
 }
-config.window_close_confirmation = "NeverPrompt"
+config.window_close_confirmation = "AlwaysPrompt"
 config.window_padding = {
 	left = 0,
-	right = 0,
-	top = 0,
+	right = 8,
+	top = 8,
 	bottom = 0,
 }
 
