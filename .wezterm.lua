@@ -40,10 +40,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, cfg, hover, max_width)
 	local cwd = pane.current_working_dir
 	if cwd then
 		local path = cwd.file_path or tostring(cwd)
-		local folder = path:match("([^/]+)/?$") or path
-		if title == "vim" or title == "nvim" or title:find("^vim") or title:find("^nvim") then
-			title = folder
-		end
+		title = path:match("([^/]+)/?$") or path
 	end
 	if title and #title > max_width - 4 then
 		title = wezterm.truncate_right(title, max_width - 6) .. "…"
@@ -89,10 +86,10 @@ config.window_frame = {
 }
 config.window_close_confirmation = "NeverPrompt"
 config.window_padding = {
-	left = 8,
-	right = 8,
-	top = 8,
-	bottom = 8,
+	left = 0,
+	right = 0,
+	top = 0,
+	bottom = 0,
 }
 
 -- Bell
