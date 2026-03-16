@@ -110,8 +110,16 @@ config.visual_bell = {
 config.term = "xterm-256color"
 config.enable_csi_u_key_encoding = true
 
--- Keys (Cmd bindings only; Option/Alt is handled natively via send_composed_key settings)
+-- Keys & Mouse
 local act = wezterm.action
+
+config.mouse_bindings = {
+	{
+		event = { Up = { streak = 1, button = "Left" } },
+		mods = "CMD",
+		action = act.OpenLinkAtMouseCursor,
+	},
+}
 config.keys = {
 	{ key = "LeftArrow", mods = "CMD", action = act.SendString("\x01") },
 	{ key = "RightArrow", mods = "CMD", action = act.SendString("\x05") },
