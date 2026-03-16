@@ -8,6 +8,7 @@ config.font_size = 18
 -- Window size
 config.initial_cols = 150
 config.initial_rows = 35
+config.line_height = 1.1
 
 -- Appearance
 config.color_scheme = "Ashes (dark) (terminal.sexy)"
@@ -108,6 +109,12 @@ config.keys = {
 	{ key = "LeftArrow", mods = "CMD", action = act.SendString("\x01") },
 	{ key = "RightArrow", mods = "CMD", action = act.SendString("\x05") },
 	{ key = "Backspace", mods = "CMD", action = act.SendString("\x15") },
+	{ key = "UpArrow", mods = "OPT", action = wezterm.action_callback(function(window)
+		window:maximize()
+	end) },
+	{ key = "DownArrow", mods = "OPT", action = wezterm.action_callback(function(window)
+		window:restore()
+	end) },
 }
 
 return config
