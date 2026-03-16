@@ -32,8 +32,9 @@ config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 config.tab_max_width = 40
 
-local SLANT_LEFT = wezterm.nerdfonts.ple_lower_right_triangle
-local SLANT_RIGHT = wezterm.nerdfonts.ple_upper_left_triangle
+local CAP_LEFT = wezterm.nerdfonts.ple_lower_right_triangle
+local CAP_RIGHT = wezterm.nerdfonts.ple_upper_left_triangle
+local BAR_BG = "#1c2023"
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, cfg, hover, max_width)
 	local pane = tab.active_pane
@@ -47,29 +48,34 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, cfg, hover, max_width)
 		title = wezterm.truncate_right(title, max_width - 6) .. "…"
 	end
 
-	local bg = "#1c2023"
+	local bg = "#272b2e"
 	local fg = "#747c84"
 	if tab.is_active then
-		bg = "#393f45"
+		bg = "#414950"
 		fg = "#c7ccd1"
 	elseif hover then
-		bg = "#2a2f33"
+		bg = "#333840"
 		fg = "#adb3ba"
 	end
 
-	local tab_bg = "#1c2023"
+	local overlap = ""
+	if tab.tab_index > 0 then
+		overlap = ""
+	end
 
 	return {
-		{ Background = { Color = tab_bg } },
+		{ Background = { Color = BAR_BG } },
+		{ Text = overlap },
 		{ Foreground = { Color = bg } },
-		{ Text = SLANT_LEFT },
+		{ Background = { Color = BAR_BG } },
+		{ Text = CAP_LEFT },
 		{ Background = { Color = bg } },
 		{ Foreground = { Color = fg } },
 		{ Attribute = { Intensity = tab.is_active and "Bold" or "Normal" } },
 		{ Text = " " .. (tab.tab_index + 1) .. ": " .. title .. " " },
-		{ Background = { Color = tab_bg } },
 		{ Foreground = { Color = bg } },
-		{ Text = SLANT_RIGHT },
+		{ Background = { Color = BAR_BG } },
+		{ Text = CAP_RIGHT },
 	}
 end)
 
