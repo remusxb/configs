@@ -3,11 +3,11 @@ local config = wezterm.config_builder()
 
 -- Font
 config.font = wezterm.font_with_fallback({
-	{ family = "Cousine Nerd Font Propo", weight = "Bold" },
-	{ family = "JetBrains Mono", weight = "Bold" },
-	{ family = "Menlo", weight = "Bold" },
-	{ family = "Consolas", weight = "Bold" },
-	{ family = "monospace", weight = "Bold" },
+	{ family = "Source Code Pro", weight = "DemiBold" },
+	{ family = "JetBrains Mono", weight = "DemiBold" },
+	{ family = "Menlo", weight = "DemiBold" },
+	{ family = "Consolas", weight = "DemiBold" },
+	{ family = "monospace", weight = "DemiBold" },
 })
 config.font_size = 18
 config.line_height = 1.1
@@ -119,6 +119,7 @@ config.enable_csi_u_key_encoding = true
 -- Keys & Mouse
 local act = wezterm.action
 
+config.bypass_mouse_reporting_modifiers = "CMD"
 config.mouse_bindings = {
 	{
 		event = { Up = { streak = 1, button = "Left" } },
