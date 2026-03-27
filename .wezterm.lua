@@ -3,7 +3,7 @@ local config = wezterm.config_builder()
 
 -- Font
 config.font = wezterm.font_with_fallback({
-	{ family = "Source Code Pro", weight = "DemiBold" },
+	{ family = "FiraMono Nerd Font", weight = "DemiBold" },
 	{ family = "JetBrains Mono", weight = "DemiBold" },
 	{ family = "Menlo", weight = "DemiBold" },
 	{ family = "Consolas", weight = "DemiBold" },
