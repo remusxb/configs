@@ -1,7 +1,8 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
+local act = wezterm.action
 
--- Font
+-------------- Font --------------
 config.font = wezterm.font_with_fallback({
 	{ family = "FiraMono Nerd Font", weight = "DemiBold" },
 	{ family = "JetBrains Mono", weight = "DemiBold" },
@@ -12,27 +13,27 @@ config.font = wezterm.font_with_fallback({
 config.font_size = 18
 config.line_height = 1.1
 
--- Window size
+-------------- Window Size --------------
 config.initial_cols = 150
 config.initial_rows = 35
 
--- Appearance
+-------------- Appearance --------------
 config.color_scheme = "Ashes (dark) (terminal.sexy)"
 config.window_background_opacity = 0.93
 config.macos_window_background_blur = 7
 
--- Cursor
+-------------- Cursor --------------
 config.default_cursor_style = "SteadyBlock"
 
--- macOS Option key sends Esc+ (terminal Alt/Meta, not composed characters)
+-------------- macOS Option Key --------------
 config.send_composed_key_when_left_alt_is_pressed = false
 config.send_composed_key_when_right_alt_is_pressed = false
 
--- Scrollback
+-------------- Scrollback --------------
 config.scrollback_lines = 10000
 config.enable_scroll_bar = false
 
--- Tab bar
+-------------- Tab Bar --------------
 config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
@@ -42,6 +43,7 @@ local CAP_LEFT = wezterm.nerdfonts.ple_lower_right_triangle
 local CAP_RIGHT = wezterm.nerdfonts.ple_upper_left_triangle
 local BAR_BG = "#1c2023"
 
+-------------- Tab Title --------------
 wezterm.on("format-tab-title", function(tab, tabs, panes, cfg, hover, max_width)
 	local pane = tab.active_pane
 	local title = pane.title
@@ -85,7 +87,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, cfg, hover, max_width)
 	}
 end)
 
--- Window
+-------------- Window --------------
 config.window_decorations = "TITLE | RESIZE"
 config.window_frame = {
 	border_left_width = "0.2cell",
@@ -105,20 +107,18 @@ config.window_padding = {
 	bottom = 0,
 }
 
--- Bell
+-------------- Bell --------------
 config.audible_bell = "Disabled"
 config.visual_bell = {
 	fade_in_duration_ms = 0,
 	fade_out_duration_ms = 0,
 }
 
--- Terminal
+-------------- Terminal --------------
 config.term = "xterm-256color"
 config.enable_csi_u_key_encoding = true
 
--- Keys & Mouse
-local act = wezterm.action
-
+-------------- Mouse --------------
 config.bypass_mouse_reporting_modifiers = "CMD"
 config.mouse_bindings = {
 	{
@@ -127,16 +127,49 @@ config.mouse_bindings = {
 		action = act.OpenLinkAtMouseCursor,
 	},
 }
+
+-------------- Keys --------------
 config.keys = {
+	-- Line navigation (Ctrl+A / Ctrl+E / Ctrl+U)
 	{ key = "LeftArrow", mods = "CMD", action = act.SendString("\x01") },
 	{ key = "RightArrow", mods = "CMD", action = act.SendString("\x05") },
 	{ key = "Backspace", mods = "CMD", action = act.SendString("\x15") },
+
+	-- Window maximize / restore
 	{ key = "UpArrow", mods = "OPT", action = wezterm.action_callback(function(window)
 		window:maximize()
 	end) },
 	{ key = "DownArrow", mods = "OPT", action = wezterm.action_callback(function(window)
 		window:restore()
 	end) },
+
+	-- Tab switching: CMD+1..9 (CMD+9 = last tab)
+	{ key = "1", mods = "CMD", action = act.ActivateTab(0) },
+	{ key = "2", mods = "CMD", action = act.ActivateTab(1) },
+	{ key = "3", mods = "CMD", action = act.ActivateTab(2) },
+	{ key = "4", mods = "CMD", action = act.ActivateTab(3) },
+	{ key = "5", mods = "CMD", action = act.ActivateTab(4) },
+	{ key = "6", mods = "CMD", action = act.ActivateTab(5) },
+	{ key = "7", mods = "CMD", action = act.ActivateTab(6) },
+	{ key = "8", mods = "CMD", action = act.ActivateTab(7) },
+	{ key = "9", mods = "CMD", action = act.ActivateTab(-1) },
+
+	-- Split panes: CMD+D horizontal, CMD+Shift+D vertical
+	{ key = "d", mods = "CMD", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "d", mods = "CMD|SHIFT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+
+	-- Pane navigation: CMD+[ prev, CMD+] next
+	{ key = "[", mods = "CMD", action = act.ActivatePaneDirection("Prev") },
+	{ key = "]", mods = "CMD", action = act.ActivatePaneDirection("Next") },
+
+	-- Close pane (closes tab if last pane)
+	{ key = "w", mods = "CMD", action = act.CloseCurrentPane({ confirm = true }) },
+
+	-- Pane resize: CMD+Shift+Arrow
+	{ key = "LeftArrow", mods = "CMD|SHIFT", action = act.AdjustPaneSize({ "Left", 3 }) },
+	{ key = "RightArrow", mods = "CMD|SHIFT", action = act.AdjustPaneSize({ "Right", 3 }) },
+	{ key = "UpArrow", mods = "CMD|SHIFT", action = act.AdjustPaneSize({ "Up", 3 }) },
+	{ key = "DownArrow", mods = "CMD|SHIFT", action = act.AdjustPaneSize({ "Down", 3 }) },
 }
 
 return config
