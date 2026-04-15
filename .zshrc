@@ -2,6 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=/opt/homebrew/bin:$PATH
 ZSH_THEME="robbyrussell"
+DISABLE_AUTO_TITLE="true"
 
 plugins=(
         brew

@@ -2,6 +2,14 @@
 stty -ixon -ixoff 2>/dev/null
 bindkey -r '^S' 2>/dev/null
 
+############## OSC 7: Report CWD to WezTerm ##############
+__wezterm_osc7() {
+  printf '\e]7;file://%s%s\e\\' "${HOST}" "${PWD}"
+}
+autoload -Uz add-zsh-hook
+add-zsh-hook chpwd __wezterm_osc7
+__wezterm_osc7
+
 ############## FZF ##############
 if command -v fzf &>/dev/null; then
   export FZF_DEFAULT_OPTS="

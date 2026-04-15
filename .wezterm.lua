@@ -33,6 +33,11 @@ config.send_composed_key_when_right_alt_is_pressed = false
 config.scrollback_lines = 10000
 config.enable_scroll_bar = false
 
+-------------- Window Title --------------
+wezterm.on("format-window-title", function(tab, pane, tabs, panes, cfg)
+	return tab.active_pane.title
+end)
+
 -------------- Tab Bar --------------
 config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
