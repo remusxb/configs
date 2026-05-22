@@ -24,6 +24,7 @@ config.macos_window_background_blur = 7
 
 -------------- Cursor --------------
 config.default_cursor_style = "SteadyBlock"
+config.cursor_blink_rate = 0
 
 -------------- macOS Option Key --------------
 config.send_composed_key_when_left_alt_is_pressed = false
