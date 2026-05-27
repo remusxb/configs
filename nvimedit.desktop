@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=NvimEdit
+Comment=Open files in WezTerm + Neovim
+Exec=/usr/bin/env bash -c 'cd "$(dirname "%f")" && wezterm start -- nvim %F'
+Type=Application
+Terminal=false
+Icon=nvim
+Categories=TextEditor;Development;
+MimeType=text/yaml;application/x-yaml;application/json;text/plain;text/markdown;text/x-python;text/x-go;text/javascript;text/typescript;text/x-java;text/x-kotlin;text/x-rust;text/x-svelte;text/x-lua;text/x-shellscript;text/html;text/css;text/xml;application/sql;application/toml;text/x-log;application/x-desktop;

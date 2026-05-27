@@ -105,6 +105,18 @@ dlogs() { docker compose logs -f --tail=100 "${@}" ; }
 # Exec into a compose service with bash if available, else sh.
 dsh()   { docker compose exec "${1:?container required}" sh -c "bash 2>/dev/null || sh" ; }
 
+############## Neovim Quick-Open ##############
+v() { nvim "${@:-.}" ; }
+
+############## Kubernetes ##############
+kedit() {
+  if [[ "${@[-1]}" =~ '^[0-9]+$' ]]; then
+    KUBE_EDITOR="nvim +${@[-1]}" kubectl edit "${@[1,-2]}"
+  else
+    KUBE_EDITOR="nvim" kubectl edit "$@"
+  fi
+}
+
 ############## Utility Functions ##############
 # mkdir -p then cd into it.
 mkcd() { mkdir -p "$1" && cd "$1" ; }
