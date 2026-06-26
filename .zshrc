@@ -59,3 +59,14 @@ export NVM_DIR="$HOME/.nvm"
 
 ############## Python ##############
 export PATH="$PATH:/Users/remus_glai/Library/Python/3.13/bin"
+
+# Disable npm package telemetry (Scarf, etc.)
+export SCARF_ANALYTICS=false
+export DO_NOT_TRACK=1
+
+############# kubectx #############
+export KUBECONFIG=$(find "$HOME/.kube/configs" \
+	-mindepth 1 -maxdepth 1 -type f \
+    | sort \
+    | tr '\n' ':')
+export KUBECONFIG=${KUBECONFIG%:}
