@@ -1,0 +1,112 @@
+# Ashes — k9s skin matching ~/.config/nvim ashes_lush (Base16 Ashes)
+# Palette lifted verbatim from lua/plugins/theme.lua
+foreground:        &foreground        "#c7ccd1"
+foreground_dim:    &foreground_dim    "#adb3ba"
+foreground_bright: &foreground_bright "#f3f4f5"
+background:        &background        "#1c2023"
+background_alt:    &background_alt    "#24282b"
+current_line:      &current_line      "#272b2e"
+selection:         &selection         "#303437"
+grey:              &grey              "#44484b"
+comment:           &comment           "#565a5d"
+red:               &red               "#c79595"
+pink:              &pink              "#c795ae"
+orange:            &orange            "#c7ae95"
+yellow:            &yellow            "#c7c795"
+green:             &green             "#aec795"
+green_bright:      &green_bright      "#95c7ae"
+blue:              &blue              "#95aec7"
+cyan:              &cyan              "#9eb7d0"
+purple:            &purple            "#ae95c7"
+teal:              &teal              "#8fb4b5"
+
+k9s:
+  body:
+    fgColor: *foreground
+    bgColor: *background
+    logoColor: *purple
+  prompt:
+    fgColor: *foreground_bright
+    bgColor: *background_alt
+    suggestColor: *orange
+  info:
+    fgColor: *blue
+    sectionColor: *foreground_dim
+  dialog:
+    fgColor: *foreground
+    bgColor: *background_alt
+    buttonFgColor: *background
+    buttonBgColor: *purple
+    buttonFocusFgColor: *background
+    buttonFocusBgColor: *green_bright
+    labelFgColor: *orange
+    fieldFgColor: *foreground
+  frame:
+    border:
+      fgColor: *grey
+      focusColor: *blue
+    menu:
+      fgColor: *foreground_dim
+      keyColor: *purple
+      numKeyColor: *orange
+    crumbs:
+      fgColor: *foreground_bright
+      bgColor: *selection
+      activeColor: *current_line
+    # Row status coloring. Healthy/Running = StdColor (body.fgColor, white).
+    # Everything transitional -> yellow; failed/terminating -> red.
+    status:
+      newColor: *foreground     # just appeared on refresh -> don't tint (white)
+      modifyColor: *foreground  # row changed on refresh -> don't tint (white)
+      addColor: *yellow         # PodInitializing (not ready)
+      pendingColor: *yellow     # Pending / ContainerCreating (not ready)
+      highlightColor: *purple   # active context (*) in :ctx; also pod "Initialized"
+      errorColor: *red          # Failed / CrashLoopBackOff / Error
+      killColor: *red           # Terminating / being deleted
+      completedColor: *comment  # Completed/Succeeded -> dimmed
+    title:
+      fgColor: *foreground_dim
+      bgColor: *background_alt
+      highlightColor: *orange
+      counterColor: *purple
+      filterColor: *green
+  views:
+    charts:
+      bgColor: *background
+      defaultDialColors:
+        - *green
+        - *red
+      defaultChartColors:
+        - *green
+        - *red
+    table:
+      fgColor: *foreground
+      bgColor: *background
+      header:
+        fgColor: *blue                    # normal (unselected) column headers
+        bgColor: *background
+        sorterColor: *purple              # the sorted column's ▲/▼ indicator
+        selectedSortColumnColor: *purple  # column selected via Shift-←/→
+    xray:
+      fgColor: *foreground
+      bgColor: *background
+      cursorColor: *selection
+      graphicColor: *purple
+      showIcons: false
+    yaml:
+      keyColor: *blue
+      colonColor: *grey
+      valueColor: *foreground
+    logs:
+      fgColor: *foreground
+      bgColor: *background
+      indicator:
+        fgColor: *foreground_bright
+        bgColor: *selection
+        toggleOnColor: *green_bright
+        toggleOffColor: *grey
+    help:
+      fgColor: *foreground
+      bgColor: *background_alt
+      indicator:
+        fgColor: *orange

@@ -1,8 +1,17 @@
 ############## Oh My Zsh ##############
 export ZSH="$HOME/.oh-my-zsh"
-export PATH=/opt/homebrew/bin:$PATH
 ZSH_THEME="robbyrussell"
 DISABLE_AUTO_TITLE="true"
+
+############## Homebrew ##############
+# macOS (Apple Silicon /opt/homebrew or Intel /usr/local) and Linux (Linuxbrew).
+if [ -x /opt/homebrew/bin/brew ]; then
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -x /usr/local/bin/brew ]; then
+        eval "$(/usr/local/bin/brew shellenv)"
+elif [ -x /home/linuxbrew/.linuxbrew/bin/brew ]; then
+        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 
 plugins=(
         brew
@@ -46,11 +55,6 @@ eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/custom.omp.json)"
 export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$PATH:/Users/remus/Library/Python/3.9/bin"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-
-############## Java ##############
-export JAVA_HOME=$(/usr/libexec/java_home -v 24)
-export PATH=$JAVA_HOME/bin:$PATH
 
 ############## NVM ##############
 export NVM_DIR="$HOME/.nvm"

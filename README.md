@@ -12,6 +12,7 @@ This repo is the **source of truth**. Files here are copied (not symlinked) to t
 | `.wezterm.lua`     | `~/.wezterm.lua`                      | WezTerm on launch                                                         |
 | `custom.omp.json`  | `~/.config/oh-my-posh/custom.omp.json`| Oh My Posh (via `oh-my-posh init zsh --config …` in `.zshrc`)             |
 | `custom.zsh`       | `~/.oh-my-zsh/custom/custom.zsh`      | Oh My Zsh auto-sources any `*.zsh` file in `~/.oh-my-zsh/custom/`         |
+| `k9s/skins/ashes.yaml` | `<k9s>/skins/ashes.yaml` (macOS `~/Library/Application Support/k9s`, Linux `~/.config/k9s`) | k9s — installer also sets `k9s.ui.skin: ashes` in `config.yaml` |
 
 `custom.zsh` doesn't need to be referenced from `.zshrc` — Oh My Zsh picks it up automatically.
 
@@ -24,6 +25,9 @@ cp .zshrc          ~/.zshrc
 cp .wezterm.lua    ~/.wezterm.lua
 cp custom.omp.json ~/.config/oh-my-posh/custom.omp.json
 cp custom.zsh      ~/.oh-my-zsh/custom/custom.zsh
+
+# k9s skin — macOS path shown; on Linux use ~/.config/k9s/skins/ashes.yaml
+cp k9s/skins/ashes.yaml "$HOME/Library/Application Support/k9s/skins/ashes.yaml"
 ```
 
 Then `exec zsh` (or restart WezTerm) to pick up changes.
@@ -62,4 +66,14 @@ Requires `wezterm` and `nvim` on your `PATH`.
 
 ## Setup from scratch
 
-See [`dependencies.md`](dependencies.md) for Homebrew/Oh My Zsh installs.
+One command installs every dependency, copies these config files into place
+(backing up anything it overwrites), and registers NvimEdit:
+
+```bash
+./install-mac.sh      # macOS
+./install-linux.sh    # Debian/Ubuntu
+```
+
+Both are idempotent (safe to re-run) and share `install-lib.sh`. See
+[`dependencies.md`](dependencies.md) for the full list of what they install and
+the manual steps if you'd rather install by hand.
