@@ -72,6 +72,7 @@ OSes; WezTerm, the font, and Docker are installed natively.
 | `.wezterm.lua` | `~/.wezterm.lua` |
 | `custom.omp.json` | `~/.config/oh-my-posh/custom.omp.json` |
 | `custom.zsh` | `~/.oh-my-zsh/custom/custom.zsh` |
+| `k9s/skins/ashes.yaml` | `<k9s>/skins/ashes.yaml` (macOS `~/Library/Application Support/k9s`, Linux `~/.config/k9s`); installer also sets `k9s.ui.skin: ashes` |
 
 ## Manual prerequisites (only if installing by hand)
 

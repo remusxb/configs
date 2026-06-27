@@ -53,7 +53,6 @@ eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/custom.omp.json)"
 
 ############## PATH ##############
 export PATH="$PATH:$(go env GOPATH)/bin"
-export PATH="$PATH:/Users/remus/Library/Python/3.9/bin"
 export PATH="$HOME/.local/bin:$PATH"
 
 ############## NVM ##############
