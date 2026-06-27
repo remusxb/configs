@@ -22,6 +22,11 @@ config.color_scheme = "Ashes (dark) (terminal.sexy)"
 config.window_background_opacity = 0.93
 config.macos_window_background_blur = 7
 
+-------------- Performance / Refresh Rate --------------
+-- Render up to 120 fps (default is 60). Use this on a 120Hz display.
+config.max_fps = 120
+config.animation_fps = 120
+
 -------------- Cursor --------------
 config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_rate = 0
