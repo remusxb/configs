@@ -107,17 +107,24 @@ install_claude() {
 }
 
 # ---------- Dotfiles ----------
-# backup_and_copy <src> <dest> : copies src->dest, backing up an existing,
-# differing dest to dest.bak.<timestamp> first.
+# backup_and_copy <src> <dest> : copies src->dest and reports which of three
+# states happened:
+#   ✓ created    dest did not exist
+#   = unchanged  dest already matched src (no copy needed)
+#   ↻ overwrote  dest existed and differed; old dest saved to dest.bak.<timestamp>
 backup_and_copy() {
   local src="$1" dest="$2"
-  if [ -e "$dest" ] && ! cmp -s "$src" "$dest"; then
+  if [ ! -e "$dest" ]; then
+    cp "$src" "$dest"
+    ok "created $dest"
+  elif cmp -s "$src" "$dest"; then
+    printf '%s  =%s unchanged %s\n' "$c_blue" "$c_reset" "$dest"
+  else
     local bak="$dest.bak.$(date +%Y%m%d%H%M%S)"
     cp "$dest" "$bak"
-    warn "backed up existing $dest -> $bak"
+    cp "$src" "$dest"
+    printf '%s  ↻%s overwrote %s (backup: %s)\n' "$c_yellow" "$c_reset" "$dest" "$bak"
   fi
-  cp "$src" "$dest"
-  ok "$dest"
 }
 
 # k9s_config_dir : prints the k9s config dir for this OS.
