@@ -36,7 +36,7 @@ OSes; WezTerm, the font, and Docker are installed natively.
 | **ripgrep** | fzf-lua live grep |
 | **tree-sitter CLI** | Compiles treesitter parsers |
 | **C compiler + make** | Build treesitter parsers (Xcode CLT on macOS, `build-essential` on Linux) |
-| **Node.js + npm** (via **nvm**) | Mason's JS language servers (prettier, ts/svelte/yaml/docker/json/markdownlint) |
+| **Node.js + npm** | Mason's JS language servers (prettier, ts/svelte/yaml/docker/json/markdownlint) |
 | **Go** | Mason's gopls/gofumpt/goimports-reviser/gomodifytags **+** delve |
 | **Python 3 + pip** | Mason's python-lsp-server, gitlint; the `jsonclip` alias |
 | **delve (dlv)** | Go debugger for nvim-dap-go |

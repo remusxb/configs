@@ -32,8 +32,9 @@ ensure_brew_clis() {
   formula neovim                                       nvim
   formula tree-sitter                                  tree-sitter
   formula jandedobbeleer/oh-my-posh/oh-my-posh         oh-my-posh
-  # --- languages (node comes from nvm, not brew) ---
+  # --- languages ---
   formula go                                           go
+  formula node                                         node
   have python3 || formula python python3
   # --- kubernetes ---
   formula kubernetes-cli                               kubectl
@@ -60,32 +61,6 @@ setup_omz() {
   if [ ! -d "$custom/plugins/zsh-syntax-highlighting" ]; then
     git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting "$custom/plugins/zsh-syntax-highlighting"
   else ok "zsh-syntax-highlighting already installed"; fi
-}
-
-# ---------- nvm + a current Node LTS (Mason's JS language servers need Node) ----------
-setup_nvm() {
-  log "Setting up nvm + Node LTS"
-  if [ ! -d "$HOME/.nvm" ]; then
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-  else
-    ok "nvm already installed"
-  fi
-  export NVM_DIR="$HOME/.nvm"
-  if [ -s "$NVM_DIR/nvm.sh" ]; then
-    set +u            # nvm.sh references unset vars; don't let `set -u` abort us
-    # shellcheck disable=SC1091
-    . "$NVM_DIR/nvm.sh"
-    if command -v nvm >/dev/null 2>&1; then
-      if [ "$(nvm version node 2>/dev/null)" = "N/A" ]; then
-        nvm install --lts || warn "nvm install failed (run 'nvm install --lts' later)"
-      else
-        ok "Node $(nvm version node) already installed via nvm"
-      fi
-    fi
-    set -u
-  else
-    warn "nvm not loaded; skipping Node install (open a new shell and run: nvm install --lts)"
-  fi
 }
 
 # ---------- Go tools ----------

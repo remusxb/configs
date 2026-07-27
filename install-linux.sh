@@ -3,9 +3,9 @@
 # install-linux.sh — set up this terminal/editor environment on Debian/Ubuntu.
 #
 # Installs apt build deps + Homebrew (Linuxbrew) and all CLI tools, WezTerm
-# (native apt repo), the FiraMono Nerd Font, Docker, Oh My Zsh + plugins,
-# nvm + Node, delve, Claude Code, copies the dotfiles into place, and registers
-# the NvimEdit "open in WezTerm+Neovim" desktop entry.
+# (native apt repo), the FiraMono Nerd Font, Docker, Oh My Zsh + plugins, delve,
+# Claude Code, copies the dotfiles into place, and registers the NvimEdit
+# "open in WezTerm+Neovim" desktop entry.
 #
 # Targets Debian/Ubuntu (uses apt). Safe to re-run.
 #
@@ -80,7 +80,6 @@ fi
 # ---------- CLI tools + shell + runtimes ----------
 ensure_brew_clis
 setup_omz
-setup_nvm
 install_go_tools
 install_claude
 

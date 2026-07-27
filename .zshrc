@@ -55,11 +55,6 @@ eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/custom.omp.json)"
 export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$HOME/.local/bin:$PATH"
 
-############## NVM ##############
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
 ############## Python ##############
 export PATH="$PATH:/Users/remus_glai/Library/Python/3.13/bin"
 

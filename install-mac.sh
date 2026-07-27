@@ -3,8 +3,8 @@
 # install-mac.sh — set up this terminal/editor environment on macOS.
 #
 # Installs Homebrew + all CLI tools, WezTerm, the Nerd Font, Docker Desktop,
-# Oh My Zsh + plugins, nvm + Node, delve, Claude Code, copies the dotfiles into
-# place, and registers the NvimEdit "open in WezTerm+Neovim" app.
+# Oh My Zsh + plugins, delve, Claude Code, copies the dotfiles into place, and
+# registers the NvimEdit "open in WezTerm+Neovim" app.
 #
 # Safe to re-run: every step is guarded and existing config files are backed up.
 #
@@ -51,7 +51,6 @@ fi
 # ---------- CLI tools + shell + runtimes ----------
 ensure_brew_clis
 setup_omz
-setup_nvm
 install_go_tools
 install_claude
 
