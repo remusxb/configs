@@ -156,8 +156,15 @@ local is_mac = wezterm.target_triple:find("darwin") ~= nil
 local LINK_MOD = is_mac and "CMD" or "CTRL"
 
 -- Hold this modifier + drag to select text in apps that grabbed the mouse
--- (nvim, tmux, k9s). macOS convention is CMD; everywhere else it's SHIFT.
-config.bypass_mouse_reporting_modifiers = is_mac and "CMD" or "SHIFT"
+-- (nvim, tmux, k9s).
+--
+-- MUST differ from LINK_MOD. The bypass modifier is stripped before bindings
+-- are matched ("treat the event as though SHIFT was not pressed and then match
+-- it against the mouse assignments"), so setting this to CMD on macOS made a
+-- CMD+click inside nvim arrive as a *bare* click: it matched CompleteSelection
+-- and the OpenLinkAtMouseCursor rows below could never be reached. SHIFT is
+-- WezTerm's default and matches iTerm2 / Terminal.app behaviour anyway.
+config.bypass_mouse_reporting_modifiers = "SHIFT"
 
 -- Don't eat the click that focuses the window: on macOS WezTerm defaults to
 -- swallowing it, so the first click on an unfocused window only raises it and
