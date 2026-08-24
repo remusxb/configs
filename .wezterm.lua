@@ -3,6 +3,8 @@ local config = wezterm.config_builder()
 local act = wezterm.action
 
 -------------- Font --------------
+-- Note: FiraMono Nerd Font ships only Regular / Medium / Bold, so DemiBold
+-- resolves to FiraMonoNerdFont-Bold.otf. "Medium" is the real middle weight.
 config.font = wezterm.font_with_fallback({
 	{ family = "FiraMono Nerd Font", weight = "DemiBold" },
 	{ family = "JetBrains Mono", weight = "DemiBold" },
@@ -13,16 +15,35 @@ config.font = wezterm.font_with_fallback({
 config.font_size = 18
 config.line_height = 1.1
 
+-------------- Font Rasterization --------------
+-- WezTerm rasterizes with FreeType (macOS-native apps use CoreText), so the
+-- defaults look softer here than in Ghostty/Terminal.app. "Light" hints glyphs
+-- vertically to the pixel grid but leaves them unhinted horizontally: crisper
+-- stems without distorting letter shapes. Matters most on non-Retina displays.
+config.freetype_load_target = "Light"
+-- Subpixel (RGB) antialiasing would be a further jump in sharpness on the 1x
+-- external monitor, but it needs an opaque background to blend against. If you
+-- ever drop window_background_opacity to 1.0, add:
+config.freetype_render_target = "HorizontalLcd"
+-- On the built-in Retina display alone, freetype_load_flags = "NO_HINTING"
+-- gives the most macOS-native look (softer, but no grid-fitting distortion).
+
 -------------- Window Size --------------
 config.initial_cols = 150
 config.initial_rows = 35
 
 -------------- Appearance --------------
 config.color_scheme = "Ashes (dark) (terminal.sexy)"
-config.window_background_opacity = 0.93
+config.window_background_opacity = 1
 config.macos_window_background_blur = 7
 
 -------------- Performance / Refresh Rate --------------
+-- WezTerm defaults to the OpenGL front end, which macOS deprecated and now
+-- emulates on top of Metal. "WebGpu" targets Metal directly: better frame
+-- pacing and noticeably smoother scrolling. If it ever misrenders, the
+-- fallback is config.front_end = "OpenGL".
+config.front_end = "WebGpu"
+
 -- Render up to 120 fps (default is 60). Use this on a 120Hz display.
 config.max_fps = 120
 config.animation_fps = 120
@@ -130,12 +151,61 @@ config.term = "xterm-256color"
 config.enable_csi_u_key_encoding = true
 
 -------------- Mouse --------------
-config.bypass_mouse_reporting_modifiers = "CMD"
+local is_mac = wezterm.target_triple:find("darwin") ~= nil
+-- CMD on macOS, CTRL elsewhere.
+local LINK_MOD = is_mac and "CMD" or "CTRL"
+
+-- Hold this modifier + drag to select text in apps that grabbed the mouse
+-- (nvim, tmux, k9s). macOS convention is CMD; everywhere else it's SHIFT.
+config.bypass_mouse_reporting_modifiers = is_mac and "CMD" or "SHIFT"
+
+-- Don't eat the click that focuses the window: on macOS WezTerm defaults to
+-- swallowing it, so the first click on an unfocused window only raises it and
+-- links/selection need a second click.
+config.swallow_mouse_click_on_window_focus = false
+config.swallow_mouse_click_on_pane_focus = false
+
 config.mouse_bindings = {
+	-- Plain left click only ever completes a selection -- never opens a link,
+	-- so click-dragging over a URL to copy it can't accidentally launch it.
 	{
 		event = { Up = { streak = 1, button = "Left" } },
-		mods = "CMD",
+		mods = "NONE",
+		action = act.CompleteSelection("ClipboardAndPrimarySelection"),
+	},
+	-- Same for shift-click / shift-alt-click, which extend a selection: by
+	-- default those also open links when the resulting selection is empty.
+	{
+		event = { Up = { streak = 1, button = "Left" } },
+		mods = "SHIFT",
+		action = act.CompleteSelection("ClipboardAndPrimarySelection"),
+	},
+	{
+		event = { Up = { streak = 1, button = "Left" } },
+		mods = "SHIFT|ALT",
+		action = act.CompleteSelection("PrimarySelection"),
+	},
+	-- CMD/CTRL + click opens the link under the cursor.
+	{
+		event = { Up = { streak = 1, button = "Left" } },
+		mods = LINK_MOD,
 		action = act.OpenLinkAtMouseCursor,
+	},
+	-- Same, but while a TUI has mouse reporting enabled.
+	{
+		event = { Up = { streak = 1, button = "Left" } },
+		mods = LINK_MOD,
+		mouse_reporting = true,
+		action = act.OpenLinkAtMouseCursor,
+	},
+	-- Swallow the matching press there so the app underneath doesn't also
+	-- receive the click. (Left alone outside mouse reporting, so CMD+drag
+	-- still moves the window.)
+	{
+		event = { Down = { streak = 1, button = "Left" } },
+		mods = LINK_MOD,
+		mouse_reporting = true,
+		action = act.Nop,
 	},
 }
 
