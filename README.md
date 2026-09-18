@@ -32,6 +32,14 @@ cp k9s/skins/ashes.yaml "$HOME/Library/Application Support/k9s/skins/ashes.yaml"
 
 Then `exec zsh` (or restart WezTerm) to pick up changes.
 
+## Machine-local WezTerm settings
+
+`.wezterm.lua` also loads `~/.wezterm.local.lua` if it exists. That file is **not** in this repo and isn't touched by the installers, so it holds per-machine settings. Right now it only colours tabs by directory: a tab takes the colours of the first rule whose `dir` contains its current directory, and every other tab keeps the defaults.
+
+The format is documented in the "Machine-local Settings" comment at the bottom of `.wezterm.lua`.
+
+Inactive and hovered tabs are drawn with a darker `bg`. If the file has an error, WezTerm logs it and ignores the file instead of failing to load the config.
+
 ## NvimEdit — Open files in WezTerm + Neovim from your file manager
 
 A lightweight app/desktop entry that opens files directly in a WezTerm window running Neovim. Double-click a `.yaml`, `.json`, `.py`, `.go`, etc. from Finder (macOS) or Nautilus (Linux) and it opens in your terminal editor with the correct working directory.
