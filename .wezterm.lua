@@ -309,9 +309,11 @@ end
 local local_settings = load_local_settings()
 
 for _, rule in ipairs(local_settings.tab_colors or {}) do
-	local dir = rule.dir:gsub("^~", function()
-		return wezterm.home_dir
-	end):gsub("/+$", "")
+	local dir = rule.dir
+		:gsub("^~", function()
+			return wezterm.home_dir
+		end)
+		:gsub("/+$", "")
 	local bg = wezterm.color.parse(rule.bg)
 	table.insert(TAB_COLORS, {
 		dir = dir,

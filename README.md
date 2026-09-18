@@ -6,13 +6,13 @@ This repo is the **source of truth**. Files here are copied (not symlinked) to t
 
 ## File → install location
 
-| Repo file          | Lives at                              | Loaded by                                                                 |
-|--------------------|---------------------------------------|---------------------------------------------------------------------------|
-| `.zshrc`           | `~/.zshrc`                            | zsh on shell start                                                        |
-| `.wezterm.lua`     | `~/.wezterm.lua`                      | WezTerm on launch                                                         |
-| `custom.omp.json`  | `~/.config/oh-my-posh/custom.omp.json`| Oh My Posh (via `oh-my-posh init zsh --config …` in `.zshrc`)             |
-| `custom.zsh`       | `~/.oh-my-zsh/custom/custom.zsh`      | Oh My Zsh auto-sources any `*.zsh` file in `~/.oh-my-zsh/custom/`         |
-| `k9s/skins/ashes.yaml` | `<k9s>/skins/ashes.yaml` (macOS `~/Library/Application Support/k9s`, Linux `~/.config/k9s`) | k9s — installer also sets `k9s.ui.skin: ashes` in `config.yaml` |
+| Repo file              | Lives at                                                                                    | Loaded by                                                         |
+| ---------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `.zshrc`               | `~/.zshrc`                                                                                  | zsh on shell start                                                |
+| `.wezterm.lua`         | `~/.wezterm.lua`                                                                            | WezTerm on launch                                                 |
+| `custom.omp.json`      | `~/.config/oh-my-posh/custom.omp.json`                                                      | Oh My Posh (via `oh-my-posh init zsh --config …` in `.zshrc`)     |
+| `custom.zsh`           | `~/.oh-my-zsh/custom/custom.zsh`                                                            | Oh My Zsh auto-sources any `*.zsh` file in `~/.oh-my-zsh/custom/` |
+| `k9s/skins/ashes.yaml` | `<k9s>/skins/ashes.yaml` (macOS `~/Library/Application Support/k9s`, Linux `~/.config/k9s`) | k9s — installer also sets `k9s.ui.skin: ashes` in `config.yaml`   |
 
 `custom.zsh` doesn't need to be referenced from `.zshrc` — Oh My Zsh picks it up automatically.
 
@@ -31,14 +31,6 @@ cp k9s/skins/ashes.yaml "$HOME/Library/Application Support/k9s/skins/ashes.yaml"
 ```
 
 Then `exec zsh` (or restart WezTerm) to pick up changes.
-
-## Machine-local WezTerm settings
-
-`.wezterm.lua` also loads `~/.wezterm.local.lua` if it exists. That file is **not** in this repo and isn't touched by the installers, so it holds per-machine settings. Right now it only colours tabs by directory: a tab takes the colours of the first rule whose `dir` contains its current directory, and every other tab keeps the defaults.
-
-The format is documented in the "Machine-local Settings" comment at the bottom of `.wezterm.lua`.
-
-Inactive and hovered tabs are drawn with a darker `bg`. If the file has an error, WezTerm logs it and ignores the file instead of failing to load the config.
 
 ## NvimEdit — Open files in WezTerm + Neovim from your file manager
 
