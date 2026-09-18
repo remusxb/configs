@@ -75,6 +75,11 @@ local CAP_LEFT = wezterm.nerdfonts.ple_lower_right_triangle
 local CAP_RIGHT = wezterm.nerdfonts.ple_upper_left_triangle
 local BAR_BG = "#1c2023"
 
+-- Markers around the active tab's label. The other tabs get the same width as
+-- padding so tabs don't shift when you switch.
+local ACTIVE_OPEN = ">> "
+local ACTIVE_CLOSE = " <<"
+
 -- Per-directory tab colours. Filled in from ~/.wezterm.local.lua under
 -- "Machine-local Settings" at the bottom of this file; declared up here so the
 -- tab title handler below can see it.
@@ -123,9 +128,12 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, cfg, hover, max_width)
 		overlap = ""
 	end
 
-	-- The active tab gets a ● marker; the others get the same width as padding
-	-- so tabs don't shift when you switch.
 	local label = (tab.tab_index + 1) .. ": " .. title
+	if tab.is_active then
+		label = ACTIVE_OPEN .. label .. ACTIVE_CLOSE
+	else
+		label = (" "):rep(wezterm.column_width(ACTIVE_OPEN)) .. label .. (" "):rep(wezterm.column_width(ACTIVE_CLOSE))
+	end
 
 	return {
 		{ Background = { Color = BAR_BG } },
@@ -136,7 +144,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, cfg, hover, max_width)
 		{ Background = { Color = bg } },
 		{ Foreground = { Color = fg } },
 		{ Attribute = { Intensity = tab.is_active and "Bold" or "Normal" } },
-		{ Text = tab.is_active and (" ● " .. label .. " ") or ("  " .. label .. "  ") },
+		{ Text = " " .. label .. " " },
 		{ Foreground = { Color = bg } },
 		{ Background = { Color = BAR_BG } },
 		{ Text = CAP_RIGHT },
