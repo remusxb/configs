@@ -75,13 +75,27 @@ local CAP_LEFT = wezterm.nerdfonts.ple_lower_right_triangle
 local CAP_RIGHT = wezterm.nerdfonts.ple_upper_left_triangle
 local BAR_BG = "#1c2023"
 
+-- Per-directory tab colours. Filled in from ~/.wezterm.local.lua under
+-- "Machine-local Settings" at the bottom of this file; declared up here so the
+-- tab title handler below can see it.
+local TAB_COLORS = {}
+
+local function tab_colors_for(path)
+	path = path:gsub("/+$", "")
+	for _, rule in ipairs(TAB_COLORS) do
+		if path == rule.dir or path:sub(1, #rule.dir + 1) == rule.dir .. "/" then
+			return rule
+		end
+	end
+end
+
 -------------- Tab Title --------------
 wezterm.on("format-tab-title", function(tab, tabs, panes, cfg, hover, max_width)
 	local pane = tab.active_pane
 	local title = pane.title
 	local cwd = pane.current_working_dir
-	if cwd then
-		local path = cwd.file_path or tostring(cwd)
+	local path = cwd and (cwd.file_path or tostring(cwd))
+	if path then
 		title = path:match("([^/]+)/?$") or path
 	end
 	if title and #title > max_width - 4 then
@@ -98,10 +112,20 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, cfg, hover, max_width)
 		fg = "#adb3ba"
 	end
 
+	local custom = path and tab_colors_for(path)
+	if custom then
+		local state = tab.is_active and custom.active or hover and custom.hover or custom.inactive
+		bg, fg = state.bg, state.fg
+	end
+
 	local overlap = ""
 	if tab.tab_index > 0 then
 		overlap = ""
 	end
+
+	-- The active tab gets a ● marker; the others get the same width as padding
+	-- so tabs don't shift when you switch.
+	local label = (tab.tab_index + 1) .. ": " .. title
 
 	return {
 		{ Background = { Color = BAR_BG } },
@@ -112,7 +136,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, cfg, hover, max_width)
 		{ Background = { Color = bg } },
 		{ Foreground = { Color = fg } },
 		{ Attribute = { Intensity = tab.is_active and "Bold" or "Normal" } },
-		{ Text = " " .. (tab.tab_index + 1) .. ": " .. title .. " " },
+		{ Text = tab.is_active and (" ● " .. label .. " ") or ("  " .. label .. "  ") },
 		{ Foreground = { Color = bg } },
 		{ Background = { Color = BAR_BG } },
 		{ Text = CAP_RIGHT },
@@ -259,5 +283,44 @@ config.keys = {
 	{ key = "UpArrow", mods = "CMD|SHIFT", action = act.AdjustPaneSize({ "Up", 3 }) },
 	{ key = "DownArrow", mods = "CMD|SHIFT", action = act.AdjustPaneSize({ "Down", 3 }) },
 }
+
+-------------- Machine-local Settings --------------
+-- Optional ~/.wezterm.local.lua is not part of this repo and holds per-machine
+-- settings. It returns a table; the keys read are:
+--   tab_colors = { { dir = "~/some/dir", bg = "#rrggbb", fg = "#rrggbb" }, ... }
+-- A tab takes the colours of the first entry whose dir contains its active
+-- pane's cwd; other tabs keep the defaults. Inactive/hovered tabs get a
+-- darkened bg. Edits to the file are picked up by the normal config reload.
+local function load_local_settings()
+	local path = wezterm.home_dir .. "/.wezterm.local.lua"
+	local f = io.open(path, "r")
+	if not f then
+		return {}
+	end
+	f:close()
+	wezterm.add_to_config_reload_watch_list(path)
+	local ok, result = pcall(dofile, path)
+	if not ok or type(result) ~= "table" then
+		wezterm.log_error("ignoring " .. path .. ": " .. tostring(result))
+		return {}
+	end
+	return result
+end
+local local_settings = load_local_settings()
+
+for _, rule in ipairs(local_settings.tab_colors or {}) do
+	local dir = rule.dir
+		:gsub("^~", function()
+			return wezterm.home_dir
+		end)
+		:gsub("/+$", "")
+	local bg = wezterm.color.parse(rule.bg)
+	table.insert(TAB_COLORS, {
+		dir = dir,
+		active = { bg = rule.bg, fg = rule.fg },
+		hover = { bg = tostring(bg:darken(0.15)), fg = rule.fg },
+		inactive = { bg = tostring(bg:darken(0.3)), fg = rule.fg },
+	})
+end
 
 return config
